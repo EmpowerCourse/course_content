@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Title: <%= title %></p>
+    <form method='POST' action='/index'>
+    	<label>Post a message:</label>
+    	<input type='text' id='message' name='message' placeholder="type your message here" />
+    	<input type='submit' value='Send'/>
+    </form>
+    <% if (message) {%>
+    <p><%= message %></p>
+    <% } %>
+  </body>
+</html>

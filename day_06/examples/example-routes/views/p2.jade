@@ -1,0 +1,15 @@
+extends layout.jade
+block content
+    #container
+        h1 Somewhat odd syntax, but very concise
+        form#mainForm(action="p3",method="post")
+          label(for="firstName") First Name
+          input#firstName(name="firstName",type="text",maxlength=25)
+
+          label(for="lastName") Last Name
+          input#lastName(name="lastName",type="text",maxlength=25)
+          br
+          button#submitButton Submit!
+block bottom_scripts
+    script(type="text/javascript").
+        alert('can you see me? - the server says #{variablePassedFromActionToTheView}');

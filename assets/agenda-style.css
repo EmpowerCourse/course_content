@@ -1,0 +1,85 @@
+/*
+#76a65c (asparagus)
+#dbf0cc (snowy mint)
+#6dad46 (apple)
+#89a775 (amulet green)
+#bae89f (madang green)
+#777674 (dove grey)
+#acaaaa (dark grey)
+#f5f8f1 (whitesmoke)
+*/
+body {
+  font-family: Verdana, Georgia, 'Cooper Black', Arial;
+  background-color: #777674;
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  padding: 6px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+div#day-description {
+  font-style: italic;
+  font-size: 11pt;
+  padding: 10px;
+  margin-top: -14px;
+  background-color: #f5f8f1;
+  color: #76a65c;
+}
+div#logo-container {
+  float:left;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+img#logo {
+  padding: 15px 25px 10px 12px;
+  display: block;
+}
+div.lunch, div.quiz {
+  border: solid 1px #000000;
+  margin: 2px 8px 2px 8px;
+  padding: 4px;
+  width:98%;
+}
+div.lunch {
+  background-color: #bae89f;
+  color: #FFFFFF;
+}
+div.quiz {
+  background-color: #777674;
+  color: #FFFFFF;
+}
+table#agenda {
+  width: 98%;
+  margin: 10px;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+}
+.todo {
+  color:#FF0000;
+}
+th {
+  background-color: #dbf0cc; 
+  padding: 12px;
+}
+tr.normal td {
+  cursor: pointer;
+}
+tr.normal td:first-child {
+  border-right: solid 1px #000000;
+  text-align: center;
+}
+tr.normal td:nth-child(2) {
+  padding-left: 8px;
+}
+tr.detail-tr td  div {
+  display: none;
+  font-style: italic;
+  font-size: 10pt;
+  font-weight: normal;
+}
+tr.detail-tr td:nth-child(2) {
+  border-left: solid 1px #000000;
+  padding:0;
+}

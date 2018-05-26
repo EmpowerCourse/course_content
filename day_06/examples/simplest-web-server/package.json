@@ -1,0 +1,11 @@
+{
+  "name": "p01",
+  "version": "1.0.0",
+  "description": "This is an initial node demo program",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ali Tahbaz",
+  "license": "ISC"
+}

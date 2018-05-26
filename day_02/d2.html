@@ -1,0 +1,316 @@
+<html>
+<head>
+<title>
+  Empower, Day 2: Agenda
+</title>
+<link rel='stylesheet' type='text/css' href='../assets/agenda-style.css'>
+<script type='text/javascript' src='../assets/agenda.js'></script>
+<base target="_blank">
+</head>
+<body>
+<div id="page-header">
+  <div id="logo-container">
+    <img alt='Empower' src='../assets/logo_empower.png' id="logo" />
+  </div>
+  <h1>Day 2</h1>
+  <div id="day-description">
+    Review HTML and CSS and dive into JavaScript.
+  </div>
+</div>
+<table id='agenda' cellspacing="0" style='table-layout:fixed;'>
+  <thead>
+    <tr>
+      <th style='width:120px;'>Time</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='normal' onclick='toggleDetails("0800")'>
+      <td>08:00 AM</td>
+      <td>Review</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0800'>
+      <ul>
+        <li>Quick Review</li>
+        <li>Overview of today's goals</li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0830")'>
+      <td>08:30 AM</td>
+      <td>CSS Complexities</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0830'>
+      <ul>
+        <li>v2.1 or v3? (<a href='http://css3test.com' target="_blank">Test your browser</a>)</li>
+        <li>F12</li>
+        <li>dimensions (px, em, %)</li>
+        <li>id vs. class</li>
+        <li>margin vs. padding and shorthand</li>
+	<ul>
+	  <li>top right bottom left</li>
+	  <li>top/bottom right/left</li>
+	  <li>top right/left bottom</li>
+	</ul>
+        <li>precedence and !important</li>
+        <li>nested scope with spaces and &gt; (<a href='http://stackoverflow.com/questions/9487483/what-does-mean-in-css' target="_blank">good SO descriptions here</a>)</li>
+	<ul>
+	  <li>Child selector</li>
+	  <li>Any descendant selector</li>
+	</ul>
+        <li>multiple element selectors with commas</li>
+        <li>specifying &amp; selecting multiple class selectors</li>
+        <li>attribute selectors with square brackets</li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0930")'>
+      <td>09:30 AM</td>
+      <td>CSS Preprocessors</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0930'>
+      <ul>
+        <li>Sass</li>
+        <ul>
+          <li><a href='http://sass-lang.com'>Intro</a></li>
+          <li><a href='http://sass-lang.com/guide'>Syntax</a></li>
+        </ul>
+        <li>Less</li>
+        <ul>
+          <li><a href='http://lesscss.org/'>Intro</a></li>
+          <li><a href='http://lesscss.org/features/'>Syntax</a></li>
+        </ul>
+        <li>Stylus</li>
+        <ul>
+          <li><a href='https://learnboost.github.io/stylus/'>Intro &amp; Syntax</a></li>
+        </ul>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1030")'>
+      <td>10:30 AM</td>
+      <td>CSS Exercises</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1030'>
+      <ul>
+        <li>15 minute drills of iterative page changes</li>
+        <ul>
+          <li>Basic colored panels, text and a pointer</li>
+          <li>Form elements with margin, padding, border &amp; alignment complexities</li>
+          <li>Descendant types and siblings with lists</li>
+          <li>Attribute selectors, floats &amp; overflow</li>
+          <li>Means of overlapping</li>
+          <li>Relative &amp; absolute images</li>
+          <li>Table styling</li>
+          <li>Rounded Edges</li>
+          <li>Links &amp; Hover Effects with Pseudoselectors</li>
+          <li>Pseudoelements</li>
+        </ul>
+        <li>Independent creation of a more complex spec</li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='lunch'>Lunch Break (12-1PM)</span>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1300")'>
+      <td>1:00 PM</td>
+      <td>Introduction to Source Control</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1300'>
+      <ul>
+        <li>Why?</li>
+        <li><a href='http://git-scm.com/book/en/v2'>git</a>
+        <ul>
+          <li>Architecture</li>
+          <li><a href='http://msysgit.github.io/'>Install Client</a></li>
+          <li>Create Repository Host Account at <a href='http://github.com'>github</a>, <a href='https://bitbucket.org/account/signup/'>bitbucket</a>, <a href='https://signup.beanstalkapp.com/?plan=Free'>beanstalk</a> or another</a></li>
+          <li><a href='https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git'>Setup SSH access</a> to eliminate the need to provide a username and password over https with <b>every</b> usage
+            <ul>
+              <li>open git bash from Windows Explorer (path doesn't matter right now)</li>
+              <li><code>ssh-keygen -t rsa -C "unique-id"</code></li>
+              <li>open the generated .pub file and copy entire contents</li>
+              <li>go to your repository host account and Add SSH Key</li>
+              <li>back in your client git bash session add the server to known hosts: <code>ssh -T serverSiteName</code> and answer 'yes' to the prompt</li>
+<!--
+<li>If access denied pops up you may need to do this as well: <code>eval `ssh-agent -s`</code></li>
+<li>If access denied pops up you may need to <a href='https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git'>do this</a> as well: create a config file (no extension) in your /.ssh directory with the following contents (that 2nd line is indented with a single space) and then restart your bash session:<br/>
+<code>Host bitbucket.org
+ IdentityFile ~/.ssh/tahbaza_sb_rsa</code></li>
+-->              
+            </ul>
+          </li>
+          <li>config your git profile so all of your interactions will be tagged appropriately in the repositories you interact with
+            <ul>
+              <li>git config --global user.name "Firstname Lastname"</li>
+              <li>git config --global user.email "your_email@youremail.com"</li>
+            </ul>
+          </li>
+          <li>setup your conflict resolution tool (mergetool) via config
+            <ul>
+              <li>Download <a href='http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'>P4Merge</a> (or another to your liking)</li>
+              <li>exec the following in a git bash: <code>git config --global merge.tool p4merge</code></li>
+              <li>exec the following in a git bash: <code>git config --global mergetool.p4merge.cmd 'p4merge.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"'</code></li>
+            </ul>
+          </li>
+          <li>Create an initial repository within your online git account (name is sacrosanct, think before you name)</li>
+          <li>clone to your local machine (either the HTTPS or SSH command will normally be copyable from your online repository view)</li>
+          <li>setup a .gitignore file appropriate to your repository</li>
+          <li>add/change/delete file(s) using an editor of your choice</li>
+          <li>add changes to snapshot your work</li>
+          <li>commit to create a point in time change set and identify it with a comment</li>
+          <li>pull to ensure you have the latest from the remote; if any changes were pulled in validate your changes are still valid/functional</li>
+          <li>push your changes to the remote</li>
+          <li>branch branchName</li>
+          <li>checkout branchName</li>
+          <li>compare to <code>git checkout -b branchName</code></li>
+          <li>commit changes in a branch</li>
+          <li>merge branchToMergeIntoCurrentBranch</li>
+          <li>conflict resolution
+            <ul>
+              <li>mergetool (when necessary)</li>
+              <li>be sure to commit following a conflict merge</li>
+            </ul>
+          </li>
+          <li>stashing
+            <ul>
+              <li>stash</li>
+              <li>stash list</li>
+              <li>stash apply (to apply to current state)</li>
+              <li>stash drop stashName (to delete)</li>
+              <li>stash pop (to apply and remove in one statement)</li>
+            </ul>
+          </li>
+          <li>delete a branch: <code>git branch -d branchName</code> (use a capital D to ignore any unmerged changes)</li>
+          <li>See this <a href='http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit'>SO post</a> for options on reverting...</li>
+        </ul>
+        </li>
+        <li><a href='http://subversion.apache.org/'>Subversion (svn)</a>
+        <ul>
+          <li>Architecture</li>
+          <li><a href='http://tortoisesvn.net/downloads.html'>Install Client</a></li>
+          <li>Setup an online account at <a href='https://signup.projectlocker.com/signup/go/Free'>ProjectLocker</a> or another provider of your choosing.</li>
+          <li>Create a svn project (name is just as important here)</li>
+          <li>Setup a local project directory
+            <ul>
+              <li>Create a directory in a desired project root on your local drive</li>
+              <li>Right click and choose SVN Checkout, specifying the repo URL and providing your credentials</li>
+              <li>Setup the /trunk, /branches and /tags subdirectories</li>
+              <li>add/change/delete file(s) <b>in trunk</b> using an editor of your choice</li>
+            </ul>
+          </li>
+          <li>"Add" the new items</li>
+          <li>SVN Update and SVN Commit are somewhat similar to pull and push</li>
+          <li>Notice how stright deletions without an SVN delete will not be respected (perform a SVN delete)...</li>
+          <li>built-in conflict resolution is decent</li>
+          <li>Setup ignores: right click on a SVN directory and /Tortoise SVN/Settings and modify the global ignore string</li>
+          <li>Right click on trunk and choose Branch/Tag, specifying the /branches/branchName in the URL; <b>Watch the Switch checkbox at the bottom, left!</b></li>
+          <li>Context-specific log details and the ability to easily deal with 1 file or 1 folder</li>
+          <li>Undo at the file level by "Update to Revision" from the log browser</li>
+          <li>Always make sure all pending changes are committed to the current branch before switching</li>
+          <li>To merge, switch to trunk and choose to Merge (reintegrate branch)</li>
+          <li>The merge will not commit to trunk, just perform the changes so you'll need to commit</li>
+          <li><a href='http://svnbook.red-bean.com/'>Learn More</a></li>
+        </ul></li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1530")'>
+      <td>3:30 PM</td>
+      <td>Introduction to JavaScript</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1530'>
+          <ul>
+            <li>Execution Context
+              <ul>
+                <li>The DOM (Web Browser)
+                  <ul>
+                    <li>window</li>
+                    <li>document</li>
+                    <li>tag/element</li>
+                    <li>style</li>
+                  </ul>
+                </li>
+                <li>node.js (Server Runtime)
+                  <ul>
+                    <li>Architecture</li>
+                    <li>install</li>
+                    <li>npm</li>
+                    <li>require</li>
+                  </ul>
+                </li>
+                <li>OS Script</li>
+              </ul>
+            </li>
+            <li>Data Types, var and 'duck' typing
+              <ul>
+                <li>string</li>
+                <li>integer</li>
+                <li>float</li>
+                <li>boolean</li>
+                <li>object</li>
+                <li>array</li>
+                <li>function</li>
+              </ul>
+            </li>
+            <li>Comparison &amp; Operators
+              <ul>
+                <li>and</li>
+                <li>or</li>
+              </ul>
+            </li>
+            <li>Function
+              <ul>
+                <li>Declaration</li>
+                <li>return</li>
+                <li>variable</li>
+                <li>IIFE (Immediately Invoked Function Expression)</li>
+              </ul>
+            </li>
+            <li>Conditionals
+              <ul>
+                <li>if...else and the ternary operator</li>
+                <li>while, break and continue</li>
+                <li>switch</li>
+                <li>for</li>
+                <li>for...in</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='quiz'>Quiz: CSS &amp; Source Control</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

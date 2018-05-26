@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../_head %>
+</head>
+  <body>
+    <div class='container'>
+      <div class='row'>
+        <div class='col-xs-6'>
+          <span class='btn btn-success pull-right' id='add-beverage'>Add a Beverage</span>
+          <h2>Beverages</h2>
+          <table class='table table-striped'>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+            <% list.forEach(function(b) { %>
+              <tr>
+                <td class='rw-name'><%= b.name %></td>
+                <td class='rw-dsc'><%= b.description %></td>
+                <td>
+                  <div class='btn-group pull-right'>
+                    <span class='btn btn-inverse btn-xs edit-beverage' data-id='<%=b.id %>'>Edit</span>
+                    <a class='btn btn-danger btn-xs' href='/catalog/beverages/delete/<%=b.id %>'>Delete</a>
+                  </div>
+                </td>
+              </tr>
+            <% }); %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class='row hide' id='edit-row'>
+        <div class='col-xs-4 col-xs-offset-2'>
+          <form method='POST' action='/catalog/beverages' class='form'>
+            <input type='hidden' id='id' name='id'/>
+            <div class='form-group'>
+              <label>Name</label>
+              <input class='form-control' type='text' id='name' name='name' />
+            </div>
+            <div class='form-group'>
+              <label>Description</label>
+              <textarea class='form-control' id='description' name='description'>
+              </textarea>
+            </div>
+            <div class='btn-group pull-right'>
+              <span id='cancel-edit' class='btn btn-inverse'>Cancel</span>
+              <input class='btn btn-primary' type='submit' value='Save'/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+<script type='text/javascript'>
+  $(document).ready(function() {
+    $('.edit-beverage').click(function() {
+      var tr = $(this).closest('tr');
+      $('#edit-row').removeClass('hide');
+      $('#id').val($(this).attr('data-id'));
+      $('#name').val(tr.find('td.rw-name').html());
+      $('#description').val(tr.find('td.rw-dsc').html());
+    });
+    $('#add-beverage').click(function() {
+      $('#edit-row').removeClass('hide');
+    });
+    $('#cancel-edit').click(function() {
+      $('#edit-row').addClass('hide');
+      $('#id').val('');
+      $('#name').val('');
+      $('#description').val('');
+    });
+  });
+</script>
+</html>

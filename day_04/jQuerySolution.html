@@ -1,0 +1,35 @@
+<html><head>
+<script type='text/javascript' src='../assets/jquery-3.3.1.min.js'></script>
+<SCRIPT type='text/javascript'>
+function schedule(selector, when, clr) {
+  setTimeout(function() {
+    $(selector).css('background-color', clr);
+  }, when * 1000);
+}
+
+$(document).ready(function() {
+    var selector = 'div#container span.x:first';
+    schedule(selector, 2, '#000000');
+    selector = 'div#container span.x:even';
+    schedule(selector, 3, '#00FF00');
+});
+</SCRIPT>
+<style type='text/css'>
+  div#a { border: solid 1px #000000; height: 80px; width: 98%; }
+  div#container { border: solid 3px #336699; height: 300px; width: 98%; }
+  span.x, span.y { width: 40px; height: 40px; display: block; margin: 5px; float: left; text-align:center;
+    padding-top:4px; background-color:#FF0000;
+  }
+</style></head><body>
+<div id="a"></div>
+<div id="container">
+   <span class="x">x1</span>
+   <span class="y">y1</span>
+   <span class="x">x2</span>
+   <span class="y">y2</span>
+   <span class="x">x3</span>
+   <span class="x">x4</span>
+   <span class="x">x5</span>
+   <span class="x">x6</span>
+</div>
+</body></html>

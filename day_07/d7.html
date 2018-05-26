@@ -1,0 +1,256 @@
+<html>
+<head>
+<title>
+  Springboard Session 1, Day 7: Agenda
+</title>
+<link rel='stylesheet' type='text/css' href='../common_assets/stylesheets/agenda-style.css'>
+<script type='text/javascript' src='../common_assets/scripts/agenda.js'></script>
+<base target="_blank">
+</head>
+<body>
+<div id="page-header">
+  <img alt='Springboard' src='../common_assets/images/logo.gif' id="logo" />
+  <h1>Day 7</h1>
+  <div id="day-description">
+    Node.js: Server-Side Javascript
+  </div>
+</div>
+<table id='agenda' cellspacing="0" style='table-layout:fixed;'>
+  <thead>
+    <tr>
+      <th style='width:120px;'>Time</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='normal' onclick='toggleDetails("0800")'>
+      <td>08:00 AM</td>
+      <td>Review</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0800'>
+          <ul>
+            <li>Review of Twitter Bootstrap</li>
+            <li>Overview of today's goals</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0830")'>
+      <td>08:30 AM</td>
+      <td>Introduction to <a href='https://nodejs.org/'>Node.js</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0830'>
+          <ul>
+            <li>Download and Install</li>
+            <li>Create and run your first server-side application
+              <ul>
+                <li>Select and use a good text editor (Sublime 2, Notepad, Textmate, etc.)</li>
+                <li>Write your node progam and save it</li>
+                <li>Open a command line, navigate to your project directory and execute <code>node <i>yourProgramName</i></code></li>
+                <li>Open a browser and navigate to <code>http://localhost:8080</code> (or whatever port your node program is listening to)</li>
+                <li>...and exactly why is that earth-shattering?</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0930")'>
+      <td>09:30 AM</td>
+      <td>Package Management with <a href='https://www.npmjs.com/'>npm</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0930'>
+          <ul>
+            <li>Node Package Manager (npm)
+              <ul>
+                <li>lets get current...
+                  <ul>
+                    <li>npm install npm -g</li>
+                    <li>npm -v</li>
+                  </ul>
+                </li>
+                <li>npm init and package.json</li>
+                <li>npm install something --save (or use package.json as the guide and just say npm install)</li>
+                <li>npm update something</li>
+                <li>npm uninstall something</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1000")'>
+      <td>10:00 AM</td>
+      <td>Practice with the Raw Basics</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1000'>
+          <ul>
+            <li>How require() works</li>
+            <li>using multiple files and the module.<a href='http://www.sitepoint.com/understanding-module-exports-exports-node-js/'>exports</a> object returned for each
+              <ul>
+                <li>reference with relative path, absolute path or implied search</li>
+                <li>module.exports = { f1: function() {} } OR</li>
+                <li>exports.f1 = function() {}</li>
+              </ul>
+            </li>
+            <li>Commonly used packages
+              <ul>
+                <li>fs</li>
+                <li>path</li>
+                <li>...and here is a <a href='http://stackoverflow.com/questions/10568512/how-to-find-search-find-npm-packages'>good SO answer</a> listing other channels to browse packages</li>
+              </ul>
+            </li>
+            <li>A <a href='http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js'>SO answer</a> with a short list of recommended node tutorial sites</li>
+            <li>Exercises (use a new package independently - <a href='http://momentjs.com/'>momentjs</a>)</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1030")'>
+      <td>10:30 AM</td>
+      <td>Adding utility with <a href='http://expressjs.com/'>express</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1030'>
+          <ul>
+            <li>Express - The most popular node webserver framework
+              <ul>
+                <li>lets get current...
+                  <ul>
+                    <li>npm install express -g</li>
+                  </ul>
+                </li>
+                <li>A suggested solution directory structure</li>
+                <li>http verbs</li>
+                <li>URL parameters (this/is/my/pretty/:urlParameter) => req.params.urlParameter</li>
+                <li>Query string parameters (this/is/my/not/so/pretty?qsParameter=parameterValue) => req.query.qsParameter</li>
+                <li>Form POST values with body-parser (form post) => req.body.formFieldName</li>
+                <li>primary express features
+                  <ul>
+                    <li>routing</li>
+                    <li>parsing http from the client</li>
+                    <li>static files</li>
+                    <li>processing form POST values</li>
+                    <li>pluggable templating engine for views (jade)</li>
+                  </ul>
+                </li>
+                <li>node-style error handling</li>
+                <li>The blessing and curse of callbacks (the "pyramid of doom")</li>
+                <li>The async library to the rescue (until promises are commonplace)
+                  <ul>
+                    <li>Plain-English use cases and example code for each from <a href='http://www.sebastianseilund.com/nodejs-async-in-practice'>Sebastian Seilund</a>
+                      <ul>
+                        <li>parallel</li>
+                        <li>series</li>
+                        <li>waterfall</li>
+                        <li>each</li>
+                        <li>...mix/match as your needs require and there is much more to found <a href='https://github.com/caolan/async'>here</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1100")'>
+      <td>11:00 AM</td>
+      <td>Automating with <a href='http://gulpjs.com/'>gulp</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1100'>
+          <ul>
+            <li>What is it and why bother?</li>
+            <li>npm install gulp</li>
+            <li>gulpfile.js structure</li>
+            <li>Setup sass preprocessing, css and js minification and a watch</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='lunch'>Lunch Break (12-1PM)</span>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1300")'>
+      <td>1:00 PM</td>
+      <td>Practice with node</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1300'>
+          <ul>
+            <li>Exercises</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1400")'>
+      <td>2:00 PM</td>
+      <td>Our first database: <a href='https://www.mongodb.org/'>MongoDB</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1400'>
+          <ul>
+            <li>Download and Install</li>
+            <li>Non-Relational Database Concepts
+              <ul>
+                <li>Architecture, Scale &amp; Comparison to Relational Approaches</li>
+                <li>Collections</li>
+                <li>Documents</li>
+                <li>Data Types</li>
+                <li>CRUD (create, read, update and delete) Operations</li>
+              </ul>
+            </li>
+            <li>Command line commands and query syntax</li>
+            <li>Enough of that... install <a href='http://robomongo.org/'>robomongo</a></li>
+            <li>...for node: <code>npm install mongoose</code></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1500")'>
+      <td>3:00 PM</td>
+      <td>First Functional Application with node and mongo</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1500'>
+          <ul>
+            <li>Exercises</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='quiz'>Quiz: Node.js &amp; MongoDB</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

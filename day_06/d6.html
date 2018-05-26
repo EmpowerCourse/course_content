@@ -1,0 +1,247 @@
+<html>
+<head>
+<title>
+  Springboard Session 1, Day 6: Agenda
+</title>
+<link rel='stylesheet' type='text/css' href='../common_assets/stylesheets/agenda-style.css'>
+<script type='text/javascript' src='../common_assets/scripts/agenda.js'></script>
+<base target="_blank">
+</head>
+<body>
+<div id="page-header">
+  <img alt='Springboard' src='../common_assets/images/logo.gif' id="logo" />
+  <h1>Day 6</h1>
+  <div id="day-description">
+    Twitter Bootstrap
+  </div>
+</div>
+<table id='agenda' cellspacing="0" style='table-layout:fixed;'>
+  <thead>
+    <tr>
+      <th style='width:120px;'>Time</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='normal' onclick='toggleDetails("0800")'>
+      <td>08:00 AM</td>
+      <td>Review</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0800'>
+          <ul>
+            <li>Review of Jquery UI &amp; Jquery Plug-Ins</li>
+            <li>Overview of today's goals</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0830")'>
+      <td>08:30 AM</td>
+      <td>Jquery UI Practice</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0830'>
+          <ul>
+            <li>Exercises</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0930")'>
+      <td>09:30 AM</td>
+      <td>Introduction to <a href='http://getbootstrap.com/'>Twitter Bootstrap</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0930'>
+          <ul>
+            <li>Download and test page setup</li>
+            <li><a href='http://getbootstrap.com/css/'>Page Layout</a>
+              <ul>
+                <li>container, rows and columns</li>
+                <li>fixed vs. fluid layout</li>
+                <li>Overlapping responsive layout with overridable xs, s, md, lg columns</li>
+                <li>Offset columns</li>
+                <li>Helper classes .pull-right and .pull-left</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/css/#type'>Typography (basic HTML styling)</a>
+              <ul>
+                <li>.lead, small, mark, del, s, ins, u, strong, em, div.jumbotron</li>
+                <li>text alignment (left, center, right, justify, nowrap)</li>
+                <li>text transform (lowercase, uppercase, capitalize), abbr, address, blockquote/cite/.blockquote-reverse, dl.dl-horizontal, code, samp, kbd, pre, var</li>
+                <li>tables (.table, .table-striped, .table-bordered, .table-hover, .table-condensed), row or cell classes (.active, .success, .warning, .danger, .info)</li>
+                <li>responsive tables must be wrapped in a div with .table-responsive</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/css/#forms'>Forms</a>
+              <ul>
+                <li>div.form-group, label[for=""], &lt;control&gt;.form-control, p.help-block, label input[type="checkbox"] + text</li>
+                <li>form.form-inline for a linear display</li>
+                <li>div.input-group to use div.input-group-addon</li>
+                <li>form.form-horizontal to have a 2-column display (labels on the left, controls on the right) but you must use col-* classes on label and divs containing controls</li>
+                <li>div.checkbox and div.radio should wrap stacked options lists, optionally add the .disabled class, optionally change to .checkbox-inline or radio-inline for linear display</li>
+                <li>p.form-control-static to display text instead of an edit control</li>
+                <li>add .has-success, .has-warning or .has-error to div.form-group to change color according to validation state</li>
+                <li>change control width with the col-* classes, change height by adding .input-sm or .input-lg, change size of all contents of a form group with .form-group-lg or .form-group-sm</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/css/#buttons'>Buttons</a>
+              <ul>
+                <li>Always add the .btn class, then optionally size by adding .btn-sm, .btn-xs or .btn-lg</li>
+                <li>Add color with .btn-default, .btn-danger, .btn-primary, .btn-success, .btn-warning, .btn-info or .btn-link</li>
+                <li>To expand to block size add .btn-block</li>
+                <li>attach to another form control with div.input-group &gt; span.input-group-btn &gt; .btn</li>
+                <li><a href='http://getbootstrap.com/components/#btn-groups'>Button Groups</a> with div.btn-group container
+                  <ul>
+                    <li>Size all contained buttons by applying .btn-group-sm, -xs or -lg to the div.btn-group</li>
+                    <li>Next .btn-group in with .btn elements for a dropdown effect</li>
+                    <li>go vertical with .btn-group-vertical</li>
+                    <li>justify width by adding .btn-group-justified to the div.btn-group</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#labels'>Labels</a></li>
+            <li><a href='http://getbootstrap.com/components/#badges'>Badges</a>
+              <ul>
+                <li>Can be used to display inverse with a span.badge embedded within a differently styled container</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/css/#images'>Images</a>
+              <ul>
+                <li>.img-rounded, .img-circle or .img-thumbnail can be added for various image frames</li>
+              </ul>
+            </li>
+            <li>Common Color Themese
+              <ul>
+                <li>.btn-, .text-, .alert-, .label-, .badge-, .progress-bar-, .list-group-item-, .panel- and .bg- can be applied with one of the following suffixes to use a standard theme
+                  <ul>
+                    <li>primary</li>
+                    <li>success</li>
+                    <li>info</li>
+                    <li>warning</li>
+                    <li>danger</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1100")'>
+      <td>11:00 AM</td>
+      <td>Powerful <a href='http://getbootstrap.com/components/'>Bootstrap Components</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1100'>
+          <ul>
+            <li><a href='http://getbootstrap.com/components/#glyphicons'>Glyphicons</a></li>
+            <li><a href='http://getbootstrap.com/components/#dropdowns'>Navigation Dropdowns</a> and <a href='http://getbootstrap.com/components/#btn-dropdowns'>Button Dropdowns</a> or with <a href='http://getbootstrap.com/components/#nav-dropdowns'>navs and pills</a></li>
+            <li><a href='http://getbootstrap.com/components/#nav'>Navs</a>
+              <ul>
+                <li>Tabs with ul.nav.nav-tabs > li[role="presentation"] > a, the selected item can have .active added</li>
+                <li>Do the same with pills by exchanging .nav-tabs with .nav-pills, make them vertical by adding .nav-stacked or vertical with .nav-justified</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#navbar'>Navbar</a> for static navigation</li>
+            <li><a href='http://getbootstrap.com/components/#breadcrumbs'>Breadcrumbs</a> for quick navigation</li>
+            <li><a href='http://getbootstrap.com/components/#alerts'>Alerts</a>
+              <ul>
+                <li>optionally .alert-dismissible with an embedded button[data-dismiss="alert"]</li>
+                <li>optionally embed links with a.alert-link</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#progress'>ProgressBar</a> with div.progress > div.progress-bar[role="progressbar"]
+              <ul>
+                <li>Set state with aria-valuenow="", aria-valuemin="" and aria-valuemax=""</li>
+                <li>optionally add text as text within the div.progres-bar</li>
+                <li>add a standard color with a progress-bar-* class on the div.progress-bar</li>
+                <li>add striping with .progress-bar-striped on the div.progress-bar</li>
+                <li>add .active to a striped progress bar to animate it</li>
+                <li>go for a stacked effect with mutliple div.progress-bar divs in div.progress, each with a specified style="width:x%"</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#list-group'>List Groups</a>
+              <ul>
+                <li>Basic form of div.list-group > div.list-group-item elements contained</li>
+                <li>ul > li is for simple display but a can be used for links</li>
+                <li>highlight an item by adding .active to a .list-group-item</li>
+                <li>use a standard display color by adding .list-group-item-* classes</li>
+                <li>subsections of an item can be defined using .list-group-item-heading and .list-group-item-text</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#panels'>Panels</a> to box things
+              <ul>
+                <li>Basic form of div.panel</li>
+                <li>use a standard display color by adding .panel-* classes</li>
+                <li>optionally add child divs with .panel-heading, .panel-body or .panel-footer</li>
+                <li>other elements, like table.table or .list-group can be defined directly under div.panel for a seamless display</li>
+              </ul>
+            </li>
+            <li><a href='http://getbootstrap.com/components/#wells'>Wells</a> also box things (simply div.well) with an optional .well-lg or .well-sm</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='lunch'>Lunch Break (12-1PM)</span>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1300")'>
+      <td>1:00 PM</td>
+      <td>Even more Bootstrap: <a href='http://getbootstrap.com/javascript/'>Javascript Components</a></td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1300'>
+          <ul>
+            <li><a href='http://getbootstrap.com/javascript/#js-events'>Custom Event Binding</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#modals'>Modals</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#dropdowns'>Dropdowns</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#scrollspy'>Scrollspy</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#tabs'>Tabs</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#tooltips'>Tooltips</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#popovers'>Popovers</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#alerts'>Alerts</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#buttons'>Buttons</a></li>
+            <li><a href='http://getbootstrap.com/javascript/#collapse'>Collapse</a> (accordion)</li>
+            <li><a href='http://getbootstrap.com/javascript/#carousel'>Carousel</a></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1600")'>
+      <td>4:00 PM</td>
+      <td>Practice with Bootstrap components</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1600'>
+          <ul>
+            <li>Exercises</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='quiz'>Quiz: Twitter Bootstrap</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
