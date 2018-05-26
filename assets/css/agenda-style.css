@@ -1,13 +1,3 @@
-/*
-#76a65c (asparagus)
-#dbf0cc (snowy mint)
-#6dad46 (apple)
-#89a775 (amulet green)
-#bae89f (madang green)
-#777674 (dove grey)
-#acaaaa (dark grey)
-#f5f8f1 (whitesmoke)
-*/
 body {
   font-family: Verdana, Georgia, 'Cooper Black', Arial;
   background-color: #777674;
@@ -22,7 +12,7 @@ h1 {
 div#day-description {
   font-style: italic;
   font-size: 11pt;
-  padding: 10px;
+  padding: 12px;
   margin-top: -14px;
   background-color: #f5f8f1;
   color: #76a65c;
@@ -43,16 +33,17 @@ div.lunch, div.quiz {
   width:98%;
 }
 div.lunch {
-  background-color: #bae89f;
+  background-color: #80ad56;
   color: #FFFFFF;
 }
 div.quiz {
   background-color: #777674;
   color: #FFFFFF;
+  margin-bottom: 7px;
 }
 table#agenda {
-  width: 98%;
-  margin: 10px;
+  width: 100%;
+  margin: 10px 0 10px 0;
   background-color: #FFFFFF;
   border-collapse: collapse;
 }
@@ -60,7 +51,7 @@ table#agenda {
   color:#FF0000;
 }
 th {
-  background-color: #dbf0cc; 
+  background-color: #dbf0cc;
   padding: 12px;
 }
 tr.normal td {
