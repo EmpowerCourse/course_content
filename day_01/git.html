@@ -1,0 +1,73 @@
+<tr class='normal' onclick='toggleDetails("1300")'>
+  <td>1:00 PM</td>
+  <td>Introduction to Source Control</td>
+</tr>
+<tr class='detail-tr'>
+  <td></td>
+  <td>
+    <div id='1300'>
+  <ul>
+    <li>Why?</li>
+    <li><a href='http://git-scm.com/book/en/v2'>git</a>
+    <ul>
+      <li>Architecture</li>
+      <li><a href='http://msysgit.github.io/'>Install Client</a></li>
+      <li>Create Repository Host Account at <a href='http://github.com'>github</a></li>
+      <li><a href='https://confluence.atlassian.com/display/BITBUCKET/Set+up+SSH+for+Git'>Setup SSH access</a> to eliminate the need to provide a username and password over https with <b>every</b> usage
+        <ul>
+          <li>open git bash from Windows Explorer (path doesn't matter right now)</li>
+          <li><code>ssh-keygen -t rsa -C "unique-id"</code></li>
+          <li>open the generated .pub file and copy entire contents</li>
+          <li>go to your repository host account and Add SSH Key</li>
+          <li>back in your client git bash session add the server to known hosts: <code>ssh -T serverSiteName</code> and answer 'yes' to the prompt</li>
+        </ul>
+      </li>
+      <li>config your git profile so all of your interactions will be tagged appropriately in the repositories you interact with
+        <ul>
+          <li>git config --global user.name "Firstname Lastname"</li>
+          <li>git config --global user.email "your_email@youremail.com"</li>
+        </ul>
+      </li>
+      <li>setup your conflict resolution tool (mergetool) via config
+        <ul>
+          <li>Download <a href='http://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools'>P4Merge</a> (or another to your liking)</li>
+          <li>exec the following in a git bash: <code>git config --global merge.tool p4merge</code></li>
+          <li>exec the following in a git bash: <code>git config --global mergetool.p4merge.cmd 'p4merge.exe \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"'</code></li>
+        </ul>
+      </li>
+      <li>Create an initial repository within your online git account (name is sacrosanct, think before you name)</li>
+      <li>clone to your local machine (either the HTTPS or SSH command will normally be copyable from your online repository view)</li>
+      <li>setup a .gitignore file appropriate to your repository</li>
+      <li>add/change/delete file(s) using an editor of your choice</li>
+      <li>add changes to snapshot your work</li>
+      <li>commit to create a point in time change set and identify it with a comment</li>
+      <li>pull to ensure you have the latest from the remote; if any changes were pulled in validate your changes are still valid/functional</li>
+      <li>push your changes to the remote</li>
+      <li>branch branchName</li>
+      <li>checkout branchName</li>
+      <li>compare to <code>git checkout -b branchName</code></li>
+      <li>commit changes in a branch</li>
+      <li>merge branchToMergeIntoCurrentBranch</li>
+      <li>conflict resolution
+        <ul>
+          <li>mergetool (when necessary)</li>
+          <li>be sure to commit following a conflict merge</li>
+        </ul>
+      </li>
+      <li>stashing
+        <ul>
+          <li>stash</li>
+          <li>stash list</li>
+          <li>stash apply (to apply to current state)</li>
+          <li>stash drop stashName (to delete)</li>
+          <li>stash pop (to apply and remove in one statement)</li>
+        </ul>
+      </li>
+      <li>delete a branch: <code>git branch -d branchName</code> (use a capital D to ignore any unmerged changes)</li>
+      <li>See this <a href='http://stackoverflow.com/questions/4114095/revert-to-a-previous-git-commit'>SO post</a> for options on reverting...</li>
+    </ul>
+    </li>
+  </ul>
+    </div>
+  </td>
+</tr>
