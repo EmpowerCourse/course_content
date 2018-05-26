@@ -1,0 +1,263 @@
+<html>
+<head>
+<title>
+  Empower Day 1: Agenda
+</title>
+<style type='text/css'>
+body {
+  font-family: Verdana, Georgia, 'Cooper Black', Arial;
+  background-color: #777674;
+}
+h1 {
+  font-size: 16pt;
+  font-weight: bold;
+  padding: 6px;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+div#day-description {
+  font-style: italic;
+  font-size: 11pt;
+  padding: 10px;
+  margin-top: -14px;
+  background-color: #f5f8f1;
+  color: #76a65c;
+}
+div#logo-container {
+  float:left;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+img#logo {
+  padding: 13px 25px 8px 12px;
+  display: block;
+}
+div.lunch, div.quiz {
+  border: solid 1px #000000;
+  margin: 2px 8px 2px 8px;
+  padding: 4px;
+  width:98%;
+}
+div.lunch {
+  background-color: #bae89f;
+  color: #FFFFFF;
+}
+div.quiz {
+  background-color: #777674;
+  color: #FFFFFF;
+}
+table#agenda {
+  width: 98%;
+  margin: 10px;
+  background-color: #FFFFFF;
+  border-collapse: collapse;
+}
+.todo {
+  color:#FF0000;
+}
+th {
+  background-color: #dbf0cc; 
+  padding: 12px;
+}
+tr.normal td {
+  cursor: pointer;
+}
+tr.normal td:first-child {
+  border-right: solid 1px #000000;
+  text-align: center;
+}
+tr.normal td:nth-child(2) {
+  padding-left: 8px;
+}
+tr.detail-tr td  div {
+  display: none;
+  font-style: italic;
+  font-size: 10pt;
+  font-weight: normal;
+}
+tr.detail-tr td:nth-child(2) {
+  border-left: solid 1px #000000;
+  padding:0;
+}
+</style>
+<script type='text/javascript'>
+  function toggleDetails(elementId) {
+    var targetDiv = document.getElementById(elementId);
+    if (targetDiv.style.display !== 'block') {
+      targetDiv.style.display = 'block';
+    } else {
+      targetDiv.style.display = 'none';
+    }
+  }
+</script>
+</head>
+<body>
+<div id="page-header">
+  <div id="logo-container">
+    <img alt='Empower' src='logo_empower.png' id="logo" />
+  </div>
+  <h1>Day 1</h1>
+  <div id="day-description">
+    Welcome to Windows &amp; the Internet.  Learn both HTML and CSS and apply them on your own.
+  </div>
+</div>
+<table id='agenda' cellspacing="0">
+  <thead>
+    <tr>
+      <th style='width:120px;'>Time</th>
+      <th>Activity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class='normal' onclick='toggleDetails("0830")'>
+      <td>08:30 AM</td>
+      <td>Introduction</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0830'>
+      	  <ul>
+            <li>Welcome</li>
+            <li>Visual overview</li>
+            <li>Technologies covered</li>
+            <li>Job role mapping</li>
+            <li>Facility Logistics, Health &amp; Safety</li>
+            <li>Overview of course content</li>
+            <li>Lunch places nearby</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("0915")'>
+      <td>09:15 AM</td>
+      <td>Getting to know each other exercise</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0915'>
+          <ul>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1000")'>
+      <td>10:00 AM</td>
+      <td>Local Installations &amp; Foundations</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1000'>
+      <ul>
+        <li>Hardware and software check</li>
+        <li>Create an <a href='http://aws.amazon.com/'>AWS</a> account</li>
+        <li>Create an <a href='http://azure.microsoft.com/en-us/documentation/'>Azure</a> account</li>
+        <li>Create a <a href='http://cloud.google.com/'>Google</a> account</li>
+        <li>Create github account</li>
+          <li>Windows Explorer, Disk Layout, UNC Paths &amp; Special Folders</li>
+          <li>Show file extensions, unhide os files</li>
+          <li>Security Architecture (domain, users, groups, folders, files)</li>
+          <li>User Account Control (UAC)</li>
+          <li>The command line, relative and absolute paths, <span style='color: #0000FF;'>EXERCISE</span></li>
+          <li>Computer Properties (name, bitness, memory, CPUs</li>
+          <li>Powershell, VBScript and more (cmd, bat, vbs and ps)</li>
+          <li>Event Viewer (eventvwr)</li>
+          <li>Task Manager (taskmgr)</li>
+          <li>Performance Monitor (perfmon)</li>
+          <li>Task Scheduler (taskschd.msc, schtasks, at)</li>
+          <li>Windows Services (services.msc), states &amp; their (simple) interface</li>
+          <li>Group Policy (gpedit.msc) &amp; msconfig.exe (Administrative Templates/Windows Components/*)</li>
+          <li>Registry &amp; Run keys (regedit)</li>
+          <li>Environment Variables &amp; PATH</li>
+          <li>Drag &amp; Drop Tricks</li>
+          <li>Snipping Tool</li>
+		  <li>Paint</li>
+	      <li>Add/remove programs</li>
+	      <li>Keyboard shortcuts</li>
+        </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='lunch'>Lunch Break (12-1PM)</span>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1300")'>
+      <td>1:00 PM</td>
+      <td>Internet Architecture</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1300'>
+	      <ul>
+          <li>View Source</li>
+          <li>Browser Debugging Tools (F12)</li>
+          <li>Browser Cache (CTRL+F5)</li>
+          <li>Cookies</li>
+          <li>IP Addresses & Internet DNS</li>
+          <li>http, :80</li>
+          <li>SSL, :443 & https</li>
+          <li>DNS resolution (hosts file)</li>
+          <li>Hosting Servers</li>
+          <li>Web Server Software & Internet Information Server (IIS)</li>
+          <li>The "Cloud" (aka utility computing)</li>
+          <li>Web Browsers</li>
+	      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1400")'>
+      <td>2:00 PM</td>
+      <td>Source control with git</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1400'>
+      <ul>
+      <li>Overall architecture</li>
+	  <li>Git setup</li>      
+	  <li>Ssh key setup</li>
+	  <li>Clone</li>
+	  <li>Pull</li>
+	  <li>.gitignore</li>
+	  <li>Add</li>
+	  <li>Commit</li>
+	  <li>Push</li>
+	  <li>Branch</li>
+	  <li>Merge</li>
+	  <li>Fetch</li>
+      <li>Upload text file with name and something about yourself, <span style='color: #0000FF;'>EXERCISE</span></li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1600")'>
+      <td>4:00 PM</td>
+      <td>Hands-On Exercises w/ HTML &amp; CSS</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1600'>
+      <ul>
+		<li>HTML introduction</li>
+        <li>Create a 2 page site <span style='color: #0000FF;'>EXERCISE</span></li>
+        <li>Procure a domain name and deploy a site to the Internet <span style='color: #0000FF;'>EXERCISE</span></li>
+      </ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <div class='quiz'>No Quiz Today</span>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

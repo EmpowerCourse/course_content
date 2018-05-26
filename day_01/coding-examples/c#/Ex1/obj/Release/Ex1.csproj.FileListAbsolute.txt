@@ -1,0 +1,14 @@
+C:\Projects\s2\examples\c#\Ex1\bin\Release\Ex1.exe.config
+C:\Projects\s2\examples\c#\Ex1\bin\Release\Ex1.exe
+C:\Projects\s2\examples\c#\Ex1\bin\Release\Ex1.pdb
+C:\Projects\s2\examples\c#\Ex1\obj\Release\Ex1.csprojResolveAssemblyReference.cache
+C:\Projects\s2\examples\c#\Ex1\obj\Release\Ex1.csproj.CoreCompileInputs.cache
+C:\Projects\s2\examples\c#\Ex1\obj\Release\Ex1.exe
+C:\Projects\s2\examples\c#\Ex1\obj\Release\Ex1.pdb
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\bin\Release\Ex1.exe.config
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\bin\Release\Ex1.exe
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\bin\Release\Ex1.pdb
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\obj\Release\Ex1.csprojResolveAssemblyReference.cache
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\obj\Release\Ex1.csproj.CoreCompileInputs.cache
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\obj\Release\Ex1.exe
+K:\Data\Dropbox (Sightsource)\Empower Trainers Shared\Curriculum\Day1\coding-examples\c#\Ex1\obj\Release\Ex1.pdb

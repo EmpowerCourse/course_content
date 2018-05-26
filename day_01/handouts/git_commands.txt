@@ -1,0 +1,9 @@
+git clone {address}
+git add .
+git commit -a -m "{message}"
+git pull origin master
+git push origin master
+git checkout -b {branch-name}
+git checkout {branch-name}
+git merge {branch-name}
+git mergetool

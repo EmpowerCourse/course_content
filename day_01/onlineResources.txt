@@ -1,0 +1,10 @@
+http://www.microsoftvirtualacademy.com/training-courses/html5-css3-fundamentals-development-for-absolute-beginners
+http://www.htmldog.com/guides/
+https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Introduction
+http://code.tutsplus.com/
+https://docs.webplatform.org/wiki/Beginners
+http://www.w3resource.com/
+http://www.microsoftvirtualacademy.com/training-courses/software-development-fundamentals
+http://www.microsoftvirtualacademy.com/training-courses/learn-html5-with-javascript-css3-jumpstart-training
+http://www.microsoftvirtualacademy.com/training-courses/adding-style-with-css
+http://www.asp.net/web-forms/videos/how-do-i/how-do-i-use-cascading-style-sheets-for-web-page-layout

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+  Our HTML Example Page
+</title>
+<style type="text/css">
+div#left-side, div#right-side {
+  width:47%;
+  float:left;
+  margin:8px;
+  background-color:#F5F5F5;
+  border: solid 1px #999999;
+  padding:10px;
+  overflow:auto;
+}
+table {
+  width:200px; 
+  border:solid 1px #666666;
+}
+td {
+  border:solid 1px #666666;
+}
+th {
+  border:solid 1px #FF0000;
+}
+
+/* pseudo-element example
+label[for]:after {
+    content: " for='" attr(for) "' ";
+}
+*/
+/* pseudo-class examples */
+a:hover {
+  background-color:#000000;
+  color:#FFFFFF;
+}
+tr td:first-child {
+  background-color:#0000FF;
+  color:#FFFFFF !important;
+}
+</style>
+<script type="text/javascript">
+// function testJs() {
+//   alert('Hi from Javascript!');
+// }
+</script>
+</head>
+<body> <!-- onload='testJs();' --> 
+<div id="left-side">
+<pre>
+  &lt;h1&gt;The&lt;/h1&gt;<br/>
+  &lt;h2&gt;Quick&lt;/h2&gt;<br/>
+  &lt;h3&gt;Brown&lt;/h3&gt;<br/>
+  &lt;h4&gt;Fox&lt;/h4&gt;<br/>
+  &lt;h5&gt;Jumped&lt;/h5&gt;<br/>
+  &lt;h6&gt;Over&lt;/h6&gt;<br/>
+  &lt;p&gt;The&lt;/p&gt;<br/>
+  &lt;blockquote>Big Red<br/>
+    &lt;cite>Dog&lt;/cite&gt;<br/>
+  &lt;/blockquote&gt;<br/>
+  &lt;form action='some/url' method='POST'&gt;<br/>
+    &lt;fieldset&gt;<br/>
+      &lt;legend&gt;Before&lt;/legend&gt;<br/>
+      &lt;label for="into-text"&gt;Running&lt;/label&gt;<br/>
+      &lt;input type="text" value='Into' id='into-text' /&gt;<br/>
+      &lt;div&gt;<br/>
+         &lt;label for="radio1"&gt;The&lt;/label&gt;<br/>
+         &lt;input type='radio' name='radio-options' id='radio1' value='radio1' /&gt; black<br/>
+         &lt;label for="radio2"&gt;and&lt;/label&gt;<br/>
+         &lt;input type='radio' name='radio-options' id='radio2' value='radio2' checked='checked' /&gt; white<br/>
+      &lt;/div&gt;<br/>
+      &lt;input type='checkbox' checked='checked'/&gt; striped<br/>
+      &lt;input type='button' value='skunk'/&gt;<br/>
+      &lt;select&gt;<br/>
+        &lt;option value='s1'&gt;which&lt;/option&gt;<br/>
+        &lt;option value='s2'&gt;had&lt;/option&gt;<br/>
+        &lt;option value='s3'&gt;a&lt;/option&gt;<br/>
+      &lt;/select&gt;<br/>
+      &lt;textarea rows="3" cols="15"&gt;very&lt;/textarea&gt;<br/>
+    &lt;/fieldset&gt;<br/>
+  &lt;/form&gt;<br/>
+  &lt;i&gt;distinct&lt;/i&gt;<br/>
+  &lt;b&gt;smell&lt;/b&gt;<br/>
+  &lt;u&gt;but&lt;/u&gt;<br/>
+  &lt;del&gt;not&lt;/del&gt;<br/>
+  &lt;span&gt;of&lt;/span&gt;<br/>
+  &lt;table&gt;<br/>
+  &lt;thead&gt;<br/>
+    &lt;tr&gt;<br/>
+      &lt;th&gt;the&lt;/th&gt;<br/>
+      &lt;th&gt;pleasant&lt;/th&gt;<br/>
+    &lt;/tr&gt;<br/>
+  &lt;/thead&gt;<br/>
+  &lt;tbody&gt;<br/>
+    &lt;tr&gt;<br/>
+      &lt;td&gt;sort.&lt;/td&gt;<br/>
+      &lt;td&gt;The&lt;/td&gt;<br/>
+    &lt;/tr&gt;<br/>
+  &lt;/tbody&gt;<br/>
+  &lt;tfoot&gt;<br/>
+    &lt;tr&gt;<br/>
+      &lt;td colspan="2"&gt;rooster standing&lt;/td&gt;<br/>
+    &lt;/tr&gt;<br/>
+  &lt;/tfoot&gt;<br/>
+  &lt;/table&gt;<br/>
+  &lt;p&gt;<br/>
+    Nearby &lt;br/&gt; took<br/>
+  &lt;/p&gt;<br/>
+  wonderful &lt;hr/&gt; <br/>
+  &lt;ul&gt;<br/>
+    &lt;li&gt;delight <br/>
+      &lt;ol&gt;<br/>
+        &lt;li&gt;in&lt;/li&gt;<br/>
+        &lt;li&gt;the&lt;/li&gt;<br/>
+      &lt;/ol&gt;<br/>
+    &lt;/li&gt;<br/>
+    &lt;li&gt;entire&lt;/li&gt;<br/>
+  &lt;/ul&gt;<br/>
+  &lt;dl&gt;<br/>
+    &lt;dt&gt;lurid&lt;/dt&gt;<br/>
+    &lt;dd&gt;scene&lt;/dd&gt;<br/>
+    &lt;dt&gt;despite&lt;/dt&gt;<br/>
+    &lt;dd&gt;being&lt;/dd&gt;<br/>
+  &lt;/dl&gt;<br/>
+  &lt;img src='images/downwind.jpg' title='downwind!' alt='downwind' /&gt;<br/>
+  &lt;a href='http://google.com'&gt;Google&lt;/a&gt; had the whole affair searchable in minutes.<br/>
+</pre>
+</div>
+<div id="right-side">
+  <h1>The</h1>
+  <h2>Quick</h2>
+  <h3>Brown</h3>
+  <h4>Fox</h4>
+  <h5>Jumped</h5>
+  <h6>Over</h6>
+  <p>The</p>
+  <blockquote>Big Red
+    <cite>Dog</cite>
+  </blockquote>
+  <form action='some/url' method='POST' style='margin-bottom:500px;'>
+    <fieldset>
+      <legend>Before</legend>
+      <label for="into-text">Running</label>
+      <input type="text" value='Into' id='into-text' />
+      <div>
+         <label for="radio1">The</label>
+         <input type='radio' name='radio-options' id='radio1' value='radio1' /> black
+         <label for="radio2">and</label>
+         <input type='radio' name='radio-options' id='radio2' value='radio2' checked='checked' /> white
+      </div>
+      <input type='checkbox' checked='checked'/> striped
+      <input type='button' value='skunk'/>
+      <select>
+        <option value='s1'>which</option>
+        <option value='s2'>had</option>
+        <option value='s3'>a</option>
+      </select>
+      <textarea rows="3" cols="15">very</textarea>
+    </fieldset>
+  </form>
+  <i>distinct</i>
+  <b>smell</b>
+  <u>but</u>
+  <del>not</del>
+  <span>of</span>
+  <table style='margin-bottom:600px;'>
+  <thead>
+    <tr>
+      <th>the</th>
+      <th>pleasant</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>sort.</td>
+      <td>The</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">rooster standing</td>
+    </tr>
+  </tfoot>
+  </table>
+  <p>
+    Nearby <br/> took
+  </p>
+  wonderful <hr style='margin-bottom:200px;' /> 
+  <ul>
+    <li>delight 
+      <ol>
+        <li>in</li>
+        <li>the</li>
+      </ol>
+    </li>
+    <li>entire</li>
+  </ul>
+  <dl>
+    <dt>lurid</dt>
+    <dd>scene</dd>
+    <dt>despite</dt>
+    <dd>being</dd>
+  </dl>
+  <img src='images/downwind.jpg' title='downwind!' alt='downwind' />
+  <a href='http://google.com'>Google</a> had the whole affair searchable in minutes.
+</div>
+</body>
+</html>
