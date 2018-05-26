@@ -47,6 +47,9 @@ table#agenda {
   background-color: #FFFFFF;
   border-collapse: collapse;
 }
+table#agenda thead{
+  color: #000000;
+}
 .todo {
   color:#FF0000;
 }
