@@ -1,211 +1,104 @@
-<html>
-<head>
-<title>
-  Empower, Day 2: Agenda
-</title>
-<link rel='stylesheet' type='text/css' href='../assets/css/agenda-style.css'>
-<script type='text/javascript' src='../assets/js/agenda.js'></script>
-</head>
-<body>
+<p></p>
 <div id="page-header">
-  <div id="logo-container">
-    <a href="../index.html">
-      <img alt='Empower' src='../assets/images/logo_empower.png' id="logo" />
-    </a>
-  </div>
-  <h1>Day 2</h1>
-  <div id="day-description">
-    Review HTML and CSS and dive into JavaScript.
-  </div>
+<div id="logo-container"><a href="../index.html"> <img id="logo" src="../assets/images/logo_empower.png" alt="Empower" /> </a></div>
+<h1>Day 2</h1>
+<div id="day-description">Street programming, HTML and CSS.</div>
 </div>
-<table id='agenda' cellspacing="0" style='table-layout:fixed;'>
-  <thead>
-    <tr>
-      <th style='width:120px;'>Time</th>
-      <th>Activity</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr class='normal' onclick='toggleDetails("0830")'>
-      <td>08:30 AM</td>
-      <td>Review</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='0830'>
-      <ul>
-        <li>Quick Review</li>
-        <li>Overview of today's goals</li>
-      </ul>
-        </div>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("0900")'>
-      <td>09:00 AM</td>
-      <td>CSS Complexities</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='0900'>
-      <ul>
-        <li>v2.1 or v3? (<a href='http://css3test.com' target="_blank">Test your browser</a>)</li>
-        <li>F12</li>
-        <li>dimensions (px, em, %)</li>
-        <li>id vs. class</li>
-        <li>margin vs. padding and shorthand</li>
-	<ul>
-	  <li>top right bottom left</li>
-	  <li>top/bottom right/left</li>
-	  <li>top right/left bottom</li>
-	</ul>
-        <li>precedence and !important</li>
-        <li>nested scope with spaces and &gt; (<a href='http://stackoverflow.com/questions/9487483/what-does-mean-in-css' target="_blank">good SO descriptions here</a>)</li>
-	<ul>
-	  <li>Child selector</li>
-	  <li>Any descendant selector</li>
-	</ul>
-        <li>multiple element selectors with commas</li>
-        <li>specifying &amp; selecting multiple class selectors</li>
-        <li>attribute selectors with square brackets</li>
-      </ul>
-        </div>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("0930")'>
-      <td>09:30 AM</td>
-      <td>CSS Preprocessors</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='0930'>
-      <ul>
-        <li>Sass</li>
-        <ul>
-          <li><a href='http://sass-lang.com'>Intro</a></li>
-          <li><a href='http://sass-lang.com/guide'>Syntax</a></li>
-        </ul>
-        <li>Less</li>
-        <ul>
-          <li><a href='http://lesscss.org/'>Intro</a></li>
-          <li><a href='http://lesscss.org/features/'>Syntax</a></li>
-        </ul>
-        <li>Stylus</li>
-        <ul>
-          <li><a href='https://learnboost.github.io/stylus/'>Intro &amp; Syntax</a></li>
-        </ul>
-      </ul>
-        </div>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("1030")'>
-      <td>10:30 AM</td>
-      <td>CSS Exercises</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='1030'>
-      <ul>
-        <li>15 minute drills of iterative page changes</li>
-        <ul>
-          <li>Basic colored panels, text and a pointer</li>
-          <li>Form elements with margin, padding, border &amp; alignment complexities</li>
-          <li>Descendant types and siblings with lists</li>
-          <li>Attribute selectors, floats &amp; overflow</li>
-          <li>Means of overlapping</li>
-          <li>Relative &amp; absolute images</li>
-          <li>Table styling</li>
-          <li>Rounded Edges</li>
-          <li>Links &amp; Hover Effects with Pseudoselectors</li>
-          <li>Pseudoelements</li>
-        </ul>
-        <li>Independent creation of a more complex spec</li>
-      </ul>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <div class='lunch'>Lunch Break (12-1PM)</span>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("1530")'>
-      <td>1 PM</td>
-      <td>Introduction to JavaScript</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='1530'>
-          <ul>
-            <li>Execution Context
-              <ul>
-                <li>The DOM (Web Browser)
-                  <ul>
-                    <li>window</li>
-                    <li>document</li>
-                    <li>tag/element</li>
-                    <li>style</li>
-                  </ul>
-                </li>
-                <li>node.js (Server Runtime)
-                  <ul>
-                    <li>Architecture</li>
-                    <li>install</li>
-                    <li>npm</li>
-                    <li>require</li>
-                  </ul>
-                </li>
-                <li>OS Script</li>
-              </ul>
-            </li>
-            <li>Data Types, var and 'duck' typing
-              <ul>
-                <li>string</li>
-                <li>integer</li>
-                <li>float</li>
-                <li>boolean</li>
-                <li>object</li>
-                <li>array</li>
-                <li>function</li>
-              </ul>
-            </li>
-            <li>Comparison &amp; Operators
-              <ul>
-                <li>and</li>
-                <li>or</li>
-              </ul>
-            </li>
-            <li>Function
-              <ul>
-                <li>Declaration</li>
-                <li>return</li>
-                <li>variable</li>
-                <li>IIFE (Immediately Invoked Function Expression)</li>
-              </ul>
-            </li>
-            <li>Conditionals
-              <ul>
-                <li>if...else and the ternary operator</li>
-                <li>while, break and continue</li>
-                <li>switch</li>
-                <li>for</li>
-                <li>for...in</li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="2">
-        <div class='quiz'>Quiz: CSS &amp; Source Control</span>
-      </td>
-    </tr>
-  </tbody>
+<table id="agenda" style="table-layout: fixed;" cellspacing="0">
+<thead>
+<tr>
+<th style="width: 120px;">Time</th>
+<th>Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="normal">
+<td>Morning</td>
+<td>Street programming and how to learn</td>
+</tr>
+<tr class="detail-tr">
+<td>&nbsp;</td>
+<td>
+<div id="0830">
+<ul>
+<li>Being a trade programmer</li>
+<li>How to learn</li>
+<li>How to research</li>
+<li>How to get a job</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="normal">
+<td>&nbsp;</td>
+<td>HTML Intro</td>
+</tr>
+<tr class="detail-tr">
+<td>&nbsp;</td>
+<td>
+<div id="0900">
+<ul>
+<li>Intro</li>
+<li>Elements</li>
+<li>Tables/Divs/Forms</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="normal">
+<td>&nbsp;</td>
+<td>CSS&nbsp;</td>
+</tr>
+<tr class="detail-tr">
+<td>&nbsp;</td>
+<td>
+<div id="0930">
+<ul>
+<li>Inline/Internal/External</li>
+<li>Why/How Examples</li>
+<li>F12 Developer Tools</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr class="normal">
+<td>&nbsp;</td>
+<td>Exercise - Get Started</td>
+</tr>
+<tr class="detail-tr">
+<td>&nbsp;</td>
+<td>
+<div id="1030">
+<ul>
+<li>Work on your CV Page</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="lunch">Lunch Break (12-1PM)</div>
+</td>
+</tr>
+<tr class="normal">
+<td>&nbsp;</td>
+<td>Exercise - More HTML CSS</td>
+</tr>
+<tr class="detail-tr">
+<td>&nbsp;</td>
+<td>
+<div id="1530">
+<ul>
+<li>Advanced CSS</li>
+<li>Work on CV</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+<div class="quiz">&nbsp;</div>
+</td>
+</tr>
+</tbody>
 </table>
-</body>
-</html>
