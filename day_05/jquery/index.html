@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fun with Jquery</title>
+    <link rel="stylesheet" type = "text/css" href="css/styles.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hideme red">
+        Div 1
+      </div>
+      <div class="hideme white">
+        Div 2
+      </div>
+      <div class="hideme blue">
+        Div 3
+      </div>
+    </div>
+    <div class="controls">
+      <button type="button" id="hide-me">Hide Me</button>
+      <button type="button" id="show-me">Show Me</button>
+      <button type="button" id="shrink-me">Shrink Me</button>
+      <button type="button" id="grow-me">Grow Me</button>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        initializePage();
+      });
+    </script>
+  </body>
+</html>

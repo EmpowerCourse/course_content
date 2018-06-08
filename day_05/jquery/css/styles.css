@@ -1,0 +1,22 @@
+button{
+  font-size: 2em;
+  margin: 10px;
+  background-color: yellow;
+}
+div.hideme{
+  height: 100px;
+  width: 100px;
+  border: 1px #000000 solid;
+  text-align: center;
+  color: #ffffff;
+}
+.red{
+  background-color: red;
+}
+div.white{
+  background-color: #ffffff;
+  color: #000000;
+}
+.blue{
+  background-color: blue;
+}
