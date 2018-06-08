@@ -1,0 +1,99 @@
+<html>
+<head>
+	<title>Jquery Table</title>
+	<script src="scripts/jquery-3.3.1.min.js"></script>
+<style type='text/css'>
+  table {
+  	width: 700px;
+  }
+  th {
+  	background-color: #000000;
+  	color: #FFFFFF;
+  }
+  th, td {
+  	padding: 12px;
+  }
+  td {
+  	border: solid 1px #000000;
+  }
+  input[type="text"] {
+  	padding: 4px;
+  	margin: 4px 12px;
+  	font-size: 12pt;
+  	width: 220px;
+  }
+  #add-row {
+  	font-size: 12pt;
+  	font-weight: bold;
+  	border: solid 2px #00FF00;
+  	padding: 8px 12px;
+  	cursor: pointer;
+  }
+  #add-row:hover {
+  	background-color: #00FF00;
+  	color: #000000;
+  }
+  .del-row {
+  	font-size: 10pt;
+  	background-color: #FFFFFF;
+  	color: #FF0000;
+  	border: solid 1px #FF0000;
+  	padding: 2px 6px;
+  	cursor: pointer;
+  }
+  #send {
+  	font-size: 20pt;
+  	padding: 16px;
+  	cursor: pointer;
+  }
+</style>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#add-row').click(function() {
+  	var rowHtml = "<tr><td>"+ 
+  		$('#first-name').val() +"</td><td>"+
+  		$('#last-name').val() +"</td><td><span class='del-row'>Delete</span></td></tr>";
+    $('table#data-rows tbody').append(rowHtml);
+    $('#first-name').val('');
+  	$('#last-name').val('');    
+  });
+  // will not work as-is, why not?
+  $('.del-row').click(function() {
+  	$(this).closest('tr').remove();
+  });
+//  $('table#data-rows').on('click', '.del-row', function() {
+//  	$(this).closest('tr').remove();
+//  });
+  $('#send').click(function() {
+  	console.log("There are " + $('table#data-rows tbody > tr').length + " rows to send");
+  	// parse the items in the list into an array of objects to prepare for send to the application server
+  });
+});		
+</script>
+</head>
+<body>
+	<table id='data-rows'>
+		<thead>
+			<tr>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th></th>
+			</tr>
+			<tr>
+				<th>
+					<input type='text' maxlength="25" id='first-name' placeholder="First Name">
+				</th>
+				<th>
+					<input type='text' maxlength="25" id='last-name' placeholder="Last Name">
+				</th>
+				<th>
+					<span id='add-row' title='Click to add a row to the list'>Add Person</span>
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+    <button id='send'>Send</button>
+</body>
+</html>

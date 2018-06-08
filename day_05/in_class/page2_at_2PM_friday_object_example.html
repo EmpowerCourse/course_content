@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- this is a test of git concurrency -->
+  <title>TGIF, again!</title>
+  <script type='text/javascript'>
+  // this is a javascript comment
+  /* this is another way to do a javascript comment */
+  function add2Numbers() {
+    var n1 = parseFloat(document.getElementById("number-1").value); // $("#number-1").val()
+    var n2 = parseInt(document.getElementById("number-2").value); // $("#number-1").val()
+    var bundleOfNumbers = {
+      "my silly variable name": n1,
+      "secondNumber": n2
+    };
+    var ourNestedObject = {ourFirstObject: bundleOfNumbers};
+    console.log(ourNestedObject.ourFirstObject["my silly variable name"]);
+    /*
+    var numericResult = n1 + n2;
+    document.getElementById("result").value = numericResult;  // $("#result").val(n1 + n2)
+    if (numericResult > 100 || n1 >= 30) {
+      document.body.style.backgroundColor = 'black';
+      window.status = 'You just entered a number larger than 100 OR your first number is greater than or equal to 30!';
+    } else {
+      document.body.style.backgroundColor = 'white';
+      window.status = '';
+    }
+    */
+  }
+  </script>
+</head>
+<body>
+  <input type='text' id='number-1' placeholder="Enter number 1">+
+  <input type='text' id='number-2' placeholder="Enter number 2">
+  <button id='enter-button' title='Click this button to add two numbers together, but you should have got that from the caption of the button, right?' onclick='add2Numbers()'>Add 2 Numbers</button>
+  = <input type='text' id='result' readonly="readonly">
+</body>
+</html>

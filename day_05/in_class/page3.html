@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TGIF v3!</title>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript'>
+    $(document).ready(function() {
+      for(var i=1; i<5; i++) {
+        // console.log(i);
+        /*
+        var lastSpanValue = $('span#s1').html();
+        var newSpanValue = lastSpanValue + i;
+        $('#s1').html(newSpanValue);
+        */
+        // $('#s1').html($('span#s1').html() + i);
+        $('#s1').append(i);
+      }
+    });
+  </script>
+</head>
+<body>
+  <span id="s1"></span>
+</body>
+</html>
