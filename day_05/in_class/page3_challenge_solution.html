@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TGIF v3!</title>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript'>
+  function getRandomColor() {
+     var letters = '0123456789ABCDEF';
+     var color = '#';
+     for (var i = 0; i < 6; i++) {
+       color += letters[Math.floor(Math.random() * 16)];
+     }
+     return color;
+  }
+
+  $(document).ready(function() {
+    $('.txt').keypress(function(e) {
+      // get the text value entered for the desired number of divs
+      // and convert it to a number
+      var divCount = parseInt($('.txt').val()); // could also say $(this) instead of $('.txt'), $(this) means the current event context in jquery
+      if (e.which == 13) { // 13 is the character code for ENTER; I don't know that, that's the kind of thing you look up when you need it
+        var container = $('#our-container');
+        for(var x=1; x <= divCount; x++) { // this is where we use our entered number
+          // console.log(x);
+          // notice we add a dynamically generated id here so that we can talk about it later 
+          container.append(
+            '<div id="div'+ x +'" style="background-color: '+ getRandomColor() +'; border: solid 1px #000000;margin: 6px;">' + x + '</div>');
+        }
+      }
+    });
+  });
+  </script>
+</head>
+<body>
+  <input type='text' class='txt' placeholder="Please enter the # of divs to create" />
+  <p id="our-container"></p>
+</body>
+</html>
+<!--
+  <script type='text/javascript'>
+    var name = 'Ali';
+    document.writeln("<h1 id='our-first-h1'>Hi There " + name + "</h1>");
+  </script>
+-->
