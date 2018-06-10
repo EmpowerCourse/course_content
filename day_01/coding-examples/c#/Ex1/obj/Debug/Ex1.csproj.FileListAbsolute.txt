@@ -1,0 +1,6 @@
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\bin\Debug\Ex1.exe.config
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\bin\Debug\Ex1.exe
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\bin\Debug\Ex1.pdb
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\obj\Debug\Ex1.csproj.CoreCompileInputs.cache
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\obj\Debug\Ex1.exe
+C:\Projects\empower\course_content\day_01\coding-examples\c#\Ex1\obj\Debug\Ex1.pdb
