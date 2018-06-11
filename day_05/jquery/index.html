@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- head is for items like meta tags, title, links to css and javascript files, and inline styles -->
     <meta charset="utf-8">
+    <!-- title shows in the browser tab -->
     <title>Fun with Jquery</title>
+    <!-- this pulls in the external style sheet in the css folder called styles.css -->
     <link rel="stylesheet" type = "text/css" href="css/styles.css" />
+    <!-- this pulls in the minified version of jquery in the js folder -->
     <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <!--
+      this pulls in the main application javascript file
+      (notice it follows jquery so that jquery is already parsed before it is referenced)
+    -->
     <script type="text/javascript" src="js/main.js"></script>
   </head>
   <body>
+    <!--
+      just 3 divs, not much to see here other than the fact that they share one class
+      and they have another distinguishing class that denotes color (although you really shouldn't use
+      color as a class) -->
     <div class="container">
       <div class="hideme red">
         Div 1
@@ -20,11 +32,20 @@
       </div>
     </div>
     <div class="controls">
+      <!--
+        these are the buttons that we are going to wire up to do things
+        since they are distinct buttons that will have their own functionality
+        we are assigning and getting a reference to them by id
+      -->
       <button type="button" id="hide-me">Hide Me</button>
       <button type="button" id="show-me">Show Me</button>
       <button type="button" id="shrink-me">Shrink Me</button>
       <button type="button" id="grow-me">Grow Me</button>
     </div>
+    <!--
+      this is a little bit of jquery that just says to run the initializePage
+      function when the page is all ready to go
+    --> 
     <script type="text/javascript">
       $(document).ready(function(){
         initializePage();

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TGIF v3!</title>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript'>
+    function getRandomColor() {
+       var letters = '0123456789ABCDEF';
+       var color = '#';
+       for (var i = 0; i < 6; i++) {
+         color += letters[Math.floor(Math.random() * 16)];
+       }
+       return color;
+    }
+
+    function addDivs(divCount) {
+      var container = $('#our-container');
+      for(var x = 1; x <= divCount; x++) {
+        // console.log(x);
+        // notice we add a dynamically generated id here so that we can talk about it later 
+        container.append(
+          '<div id="div'+ x +'" style="background-color: '+getRandomColor()+'; border: solid 1px #000000;margin: 6px;">' + x + '</div>');
+      }
+    }
+
+    function removeDivsWithDelay(divCount) {
+      for(var y = 1; y <= divCount; y++) {
+        // this is the craziness with the hard challenge:
+        // we must use setTimeout to tell it to run some number of
+        // milliseconds in the future and accept a parameter of 'y'
+        // we use that parameter y to be fed into the 'divNumber' function parameter
+        // we then use divNumber that to find and remove the dynamically generated div id from above 
+        var waitInMilliseconds = y * 1000;
+        // setTimeout takes either 2 or 3 parameters
+        // 1: the function to run later
+        // 2: the number of milliseconds to wait until it should run
+        // 3: (optional) any parameters that should be passed to the function when it runs
+        setTimeout(function(divNumber) {
+            $('#div' + divNumber).remove(); // this will completely delete the element from the page
+            // if you don't want to delete it but just make it invisible  you could do this:
+            // $('#div' + divNumber).hide();
+          }, waitInMilliseconds, divCount + 1 - y);
+      }
+    }
+
+    // tell jquery to call this function as soon as the page finishes loading
+    $(document).ready(function() {
+      // lets put the cursor into the textbox automatically
+      $('.txt').focus();
+      // now we tell jquery to find elements with a class of txt and 
+      // request that this function be called whenever a key is pressed while it has focus
+      $('.txt').keypress(function(e) {
+        // get the text value entered for the desired number of divs
+        // and convert it to a number
+        var divCount = parseInt($('.txt').val()); // could also say $(this) instead of $('.txt') here as $(this) means the current event context in jquery
+        if (e.which == 13) { // 13 is the character code for ENTER; I don't know that, that's the kind of thing you look up when you need it
+          addDivs(divCount);
+          removeDivsWithDelay(divCount);
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <p>Press ENTER after entering a valid number to create the divs.</p>
+  <input type='text' class='txt' placeholder="Please enter the # of divs to create" />
+  <p id="our-container"></p>
+</body>
+</html>
+<!--
+  <script type='text/javascript'>
+    var name = 'Ali';
+    document.writeln("<h1 id='our-first-h1'>Hi There " + name + "</h1>");
+  </script>
+-->

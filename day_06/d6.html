@@ -15,7 +15,7 @@
   </div>
   <h1>Day 6</h1>
   <div id="day-description">
-    Twitter Bootstrap
+    Javascript, Jquery &amp; Twitter Bootstrap
   </div>
 </div>
 <table id='agenda' cellspacing="0" style='table-layout:fixed;'>
@@ -26,43 +26,151 @@
     </tr>
   </thead>
   <tbody>
-    <tr class='normal' onclick='toggleDetails("0830")'>
+    <tr class='normal' onclick='toggleDetails("Morning")'>
       <td>08:30 AM</td>
       <td>Review</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='0830'>
+        <div id='Morning'>
           <ul>
-            <li>Review of Jquery UI &amp; Jquery Plug-Ins</li>
-            <li>Overview of today's goals</li>
+            <li>Seeing code through full stack eyes - peek at 6 languages</li>
+            <li>Pick up the keys</li>
+            <li>HTML elements review 
+              <ul>
+                <li>textarea</li>
+                <li>radio</li>
+                <li>checkbox</li>
+                <li>table <i>colspan</i></li>
+                <li>form <i>action, method</i></li>
+                <li>img and a together</li>
+              </ul>
+            </li>
+            <li>CSS and preprocessor mention
+              <ul>
+                <li>Parent Child</li>
+                <li>Selector for more than 1 class on a single element</li>
+                <li>Selector for multiple elements</li>
+                <li>Units (px, %, em, etc.)</li>
+              </ul>
+            </li>
+            <li>Javascript
+              <ul>
+                <li>Array (push, pop, splice, join)</li>
+                <li>setTimeout and threads of execution</li>
+	            <li>$</li>
+	            <li>selector syntax mirrors css</li>
+	            <li>function definition, calling and reference</li>
+	            <li>interpreted vs. compiled</li>
+	            <li>Java is <b>not</b> Javascript</li>
+	            <li>comparison operators !=, ==, <, >, <=, >=, ===, !== </li>
+	            <li>browser as a container</li>
+	            <li>for(var p in obj) { console.log(obj[propertyName]); }</li>
+	            <li>case sensitivity</li>
+	            <li>dynamic binding with on()</li>
+	            <li>variable data types
+	              <ul>
+	                <li>number (int or float)</li>
+		            <li>boolean</li>
+		            <li>string</li>
+		            <li>date</li>
+		            <li>array</li>
+		            <li>object</li>
+	              </ul>
+	            </li>
+	            <li>events
+	              <ul>
+	                <li>focus</li>
+		            <li>blur</li>
+		            <li>keypress</li>
+		            <li>keydown</li>
+		            <li>change</li>
+		            <li>click</li>
+		            <li>dblclick</li>
+		            <li>hover</li>
+		            <li>mouseenter, mousemove, mouseleave</li>
+	              </ul>
+	            </li>
+	            <li>methods (functions that belong to objects)
+	              <ul>
+	                <li>eq</li>
+		            <li>attr</li>
+		            <li>remove</li>
+		            <li>trigger</li>
+		            <li>addClass</li>
+		            <li>removeClass</li>
+	              </ul>
+	            </li>
+	            <li>$(this)</li>
+	            <li>define a method</li>
+	            <li>redefine a method</li>
+	            <li>"callback" examples
+	              <ul>
+	                <li>inline function definitions</li>
+	                <li>pass function variable</li>
+	              </ul>
+				</ul>
+	            </li>
+              </ul>
+            </li>
           </ul>
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("0900")'>
-      <td>09:00 AM</td>
-      <td>Jquery UI Practice</td>
+    <tr class='normal' onclick='toggleDetails("1000")'>
+      <td>10:00 AM</td>
+      <td>$.ajax and API usage</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='0900'>
+        <div id='1000'>
           <ul>
-            <li>Exercises</li>
+            <li>Postman - <a href='https://www.getpostman.com/'>Download</a></li>
+            <li>Exercise: Vote for tomorrow's API focus using a node + mongo app on the server (http://voteapi.empower2018.us/)
+              <ul>
+                <li>GET <tt>/tally</tt> to list current, overall voting results</li>
+                <li>GET <tt>/apis</tt> to list the available apis to choose from</li>
+                <li>GET <tt>/your-github-username-here/vote</tt> to see your current vote</li>
+                <li>POST to <tt>/your-github-username-here/vote</tt> to place your vote</li>
+                <li>DELETE to <tt>/your-github-username-here/vote</tt> to remove your vote</li>
+              </ul>
+            </li>
+            <li>Voting options
+              <ul>
+                <li>Twilio</li>
+                <li>Spotify</li>
+                <li>Slack</li>
+                <li>Twitter</li>
+                <li>Github</li>
+                <li><a href='https://ndb.nal.usda.gov/ndb/api/doc'>USDA Nutrient Database</a></li>
+                <li><a href='https://www.nutritionix.com/business/api'>Nutrition and Restaurant Database</a></li>
+                <li><a href='https://openweathermap.org/api'>Weather</a></li>
+                <li>Brewry DB</li>
+                <li><a href='https://www.coindesk.com/api/'>Coindesk (Bitcoin pricing)</a></li>
+                <li><a href='https://www.worldtradingdata.com/'>Stock Trading Data</a></li>
+                <li><a href='https://www.reddit.com/dev/api'>Reddit</a></li>
+                <li>Google Maps and leaflet.js</li>
+                <li><a href='http://imagerecognition.apixml.net/'>Image Recognition with AI</a></li>
+                <li>Pokemon (yes, <a href='https://pokeapi.co/' target="_blank">Pokemon</a>)</li>
+                <li>Google Translate</li>
+                <li><a href='https://www.flickr.com/services/api/'>Flickr</a></li>
+                <li>Google Calendar</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("0930")'>
-      <td>09:30 AM</td>
+    <tr class='normal' onclick='toggleDetails("1030")'>
+      <td>10:30 AM</td>
       <td>Introduction to <a href='http://getbootstrap.com/'>Twitter Bootstrap</a></td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='0930'>
+        <div id='1030'>
           <ul>
             <li>Download and test page setup</li>
             <li><a href='http://getbootstrap.com/css/'>Page Layout</a>
@@ -139,14 +247,19 @@
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1100")'>
-      <td>11:00 AM</td>
-      <td>Powerful <a href='http://getbootstrap.com/components/'>Bootstrap Components</a></td>
+    <tr>
+      <td colspan="2">
+        <div class='lunch'>Lunch Break (12-1PM)</span>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1300")'>
+      <td>01:00 PM</td>
+      <td>Bootstrap <a href='http://getbootstrap.com/components/'>Layout Components</a></td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1100'>
+        <div id='1300'>
           <ul>
             <li><a href='http://getbootstrap.com/components/#glyphicons'>Glyphicons</a></li>
             <li><a href='http://getbootstrap.com/components/#dropdowns'>Navigation Dropdowns</a> and <a href='http://getbootstrap.com/components/#btn-dropdowns'>Button Dropdowns</a> or with <a href='http://getbootstrap.com/components/#nav-dropdowns'>navs and pills</a></li>
@@ -196,19 +309,14 @@
         </div>
       </td>
     </tr>
-    <tr>
-      <td colspan="2">
-        <div class='lunch'>Lunch Break (12-1PM)</span>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("1300")'>
-      <td>1:00 PM</td>
-      <td>Even more Bootstrap: <a href='http://getbootstrap.com/javascript/'>Javascript Components</a></td>
+    <tr class='normal' onclick='toggleDetails("1500")'>
+      <td>03:00 PM</td>
+      <td>Bootstrap <a href='http://getbootstrap.com/javascript/'>Javascript Components</a></td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1300'>
+        <div id='1500'>
           <ul>
             <li><a href='http://getbootstrap.com/javascript/#js-events'>Custom Event Binding</a></li>
             <li><a href='http://getbootstrap.com/javascript/#modals'>Modals</a></li>
@@ -225,23 +333,10 @@
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1600")'>
-      <td>4:00 PM</td>
-      <td>Practice with Bootstrap components</td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='1600'>
-          <ul>
-            <li>Exercises</li>
-          </ul>
-        </div>
-      </td>
-    </tr>
     <tr>
       <td colspan="2">
-        <div class='quiz'>Quiz: Twitter Bootstrap</span>
+         <div class='quiz'><a href='jq_data_table/index.html' target="_blank">Jquery Table challenge</a></div>
+         <div class='quiz'><a href='https://www.classmarker.com' target="_blank">HTML, CSS &amp; Javascript Assessment</a></div>
       </td>
     </tr>
   </tbody>
