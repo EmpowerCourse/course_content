@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>World Cup Standings 2018</title>
+  <link rel="stylesheet" href='styles.css' type='text/css'>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<table id='standings' style='width: 500px;'>
+	<thead>
+		<tr class='very-large-font'>
+<script type='text/javascript'>	
+	// var regions = ['Americas', 'EU'];
+	var regions = [];
+	regions.push('Americas');
+	regions.push('EU');
+	regions.push('Asia');
+	for(var i=0; i<regions.length; i++) {
+		document.writeln('<th colspan=\'2\'>' + regions[i] + '</th>');
+	}
+	function showAlert() {
+		alert(regions.join());
+	    // setTimeout(showAlert, 2000);
+	}
+	// setTimeout(showAlert, 2000);
+</script>		
+<!--
+			<th colspan='2'>Americas</th>
+			<th colspan='2'>EU</th>
+-->
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Brazil
+	<a href='https://en.wikipedia.org/wiki/Brazil_national_football_team' target='_blank'>
+	  <img src='images/brazil.png' style='width: 25px;'/>
+	</a>
+			</td>
+			<td>1</td>
+			<td>Netherlands</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<table id='winners'>
+	<thead>
+		<tr class='header-row very-large-font'>
+			<td>Week 1</td>
+			<td>Week 2</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Brazil</td>
+			<td>Netherlands</td>
+		</tr>
+	</tbody>
+</table>
+<input type='button' id='submit-button' value='Click to see the winners'/>
+<div id='api-result'>
+</div>
+<script type='text/javascript'>
+	$(document).ready(function() {
+		$('#submit-button').click(function() {
+			// get info from a public api and display the results on the screen
+	        $.ajax({
+	            // data: {},
+	            // cache: false,
+	            type: 'GET',
+				crossDomain: true,
+	            url: 'http://voteapi.empower2018.us/apis',
+	            success: function (result) {
+/* we get this type of thing back:
+[
+	{"_id":"5b1d8df1f6f0a82d6c454625","name":"Twilio"},
+	{"_id":"5b1d8e03f6f0a82d6c454626","name":"Spotify"}
+]
+*/
+					for(var i=0; i < result.length; i++) {
+						/*
+						var obj = result[i];
+						var nameValue = obj.name; // obj["name"]
+						$('#api-result').append(nameValue + '</br>');
+						*/
+						$('#api-result').append(result[i].name + '</br>');
+					}
+	            }
+	        });
+		});
+	});
+</script>
+</body>
+</html>

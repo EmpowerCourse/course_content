@@ -1,0 +1,30 @@
+body {
+  background-color: #000000;
+  color: white;
+}
+table#standings td, 
+table#standings th, 
+table#winners td {
+	border: solid 1px yellow;
+}
+#winners {
+	background-color: green;
+}
+
+#winners tr.header-row td, 
+	tr.very-large-font td, 
+	tr.very-large-font th {
+  font-size: 3em;
+}
+
+table#standings tbody td {
+  background-color: blue;
+}
+
+table {
+	width: 90%;
+}
+
+a img {
+	text-decoration: none;
+}
