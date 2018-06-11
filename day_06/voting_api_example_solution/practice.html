@@ -1,0 +1,76 @@
+<html>
+<head>
+  <title>Ajax Review</title>
+  <style type='text/css'>
+    div.api-div {
+    	width: 300px;
+    	background-color: #F0F0F0;
+    	margin: 10px;
+    	cursor: pointer;
+    }
+  </style>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript'>
+  	function bindDivClickEvents() {
+		$('.api-div').click(function() {
+			var clickedTextValueInTheDiv = $(this).html();
+	  		$.ajax({
+	  			type: 'POST',
+	  			data: { "api_name": clickedTextValueInTheDiv },
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+	  			success: function(data) {
+	  				console.log(data);
+	  			}
+	  		});
+		});
+	}
+
+  	$(document).ready(function() {
+  		$.ajax({
+  			type: 'GET',
+  			url: 'http://voteapi.empower2018.us/apis',
+  			success: function(api_list_array) {
+  				var targetContainer = $('#api-list');
+  				for(var i=0; i<api_list_array.length; i++) {
+  					var currentObject = api_list_array[i];
+  					targetContainer.append(
+  						'<div class="api-div">'+ currentObject.name +'</div>'
+  						);
+  				}
+  				bindDivClickEvents();
+  			}
+  		});
+  	// 	$(document).on('click', '.api-div', function() {
+			// var clickedTextValueInTheDiv = $(this).html();
+			// alert(clickedTextValueInTheDiv);
+  	// 	});
+  		$("#show-me-my-vote").click(function() {
+	  		$.ajax({
+	  			type: 'GET',
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+	  			success: function(data) {
+	  				// console.log(data);
+	  				alert('You voted for ' + data.message.api_name);
+	  			}
+	  		});
+  		});
+  		$("#delete-vote").click(function() {
+	  		$.ajax({
+	  			type: 'DELETE',
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+	  			success: function(data) {
+	  				console.log(data);
+	  				// alert('You voted for ' + data.message.api_name + ' not pokemon');
+	  			}
+	  		});
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<button id="show-me-my-vote">Show Current Vote</button>
+	<button id="delete-vote">Delete My Vote</button>
+  <div id='api-list'>
+  </div>
+</body>
+</html>
