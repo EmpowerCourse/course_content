@@ -1,8 +1,11 @@
+/* style for the buttons */
 button{
   font-size: 2em;
   margin: 10px;
   background-color: yellow;
 }
+
+/* common style for the divs */
 div.hideme{
   height: 100px;
   width: 100px;
@@ -10,6 +13,8 @@ div.hideme{
   text-align: center;
   color: #ffffff;
 }
+
+/* styles for the individual colored divs */
 .red{
   background-color: red;
 }
