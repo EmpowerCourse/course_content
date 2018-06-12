@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Giphy!</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/secrets.js"></script>
+  </head>
+  <body style="background-color: #000000;">
+    <div class="container">
+      <div class="row-fluid">
+        <div class="col-sm-12">
+          <div class="card">
+            <input placeholder="search for a gif" class="form-element" type="text" id="search-box" value="">
+            <button id="search" class="btn btn-primary btn-sm" type="button" name="button">Get me some GIFs!</button
+          </div>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <div class="col-sm-12">
+          <button style="display:none;" class="btn btn-primary" id="previous" type="button" name="button">Previous</button>
+          <button class="btn btn-primary" id="next" type="button" name="button">Next</button>
+        </div>
+      </div>
+      <div class="row-fluid" style="margin-top: 20px;">
+        <div id="results" class="col-sm-12">
+
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var limit = 4;
+        var pageOffset = 0;
+        var query = '';
+
+        var callApi = function(){
+          var apiKey = getKey();
+          $.get('http://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=' + apiKey + '&limit=' + limit + '&offset=' + pageOffset,
+            function(results){
+              console.log(results);
+              $('#results').html('');
+              if (results.data) {
+                  for (var i = 0; i < results.data.length; i++) {
+                    var imagesHtml = '';
+                    imagesHtml += '<img alt="gif" src="';
+                    imagesHtml += results.data[i].images.original.url;
+                    imagesHtml += '" />';
+                    $('#results').append(imagesHtml);
+                }
+              }
+            });
+          if (pageOffset !== 0) {
+            $('#previous').show();
+          }
+          else{
+            $('#previous').hide();
+          }
+        };
+
+        //wire up click event
+        $('#search').click(function(){
+          pageOffset = 0;
+          query = $('#search-box').val();
+          callApi();
+          $('#search-box').val('');
+          $('#search-box').focus();
+        });
+
+        //wiring up next and previous click events
+        $('#next').click(function(){
+          pageOffset += limit;
+          callApi();
+        });
+
+        $('#previous').click(function(){
+          pageOffset -= limit;
+          callApi();
+        });
+
+        //wire up enter key to click the button to do the search
+        $('#search-box').keypress(function(e) {
+          if(e.which == 13) {
+            $('#search').trigger('click');
+          }
+        });
+
+        //focus on search when page loads
+        $('#search-box').focus();
+      });
+    </script>
+  </body>
+</html>

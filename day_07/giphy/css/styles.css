@@ -1,0 +1,13 @@
+body{
+  background-color: #000000;
+}
+
+h2 {
+  color: #ffffff;
+}
+.card{
+  padding: 5px;
+}
+#results img{
+  margin: 10px;
+}
