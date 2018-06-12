@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Play</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script type='text/javascript' src='js/jquery-3.3.1.min.js'></script>
+	<script type='text/javascript' src='js/bootstrap.min.js'></script>
+	<script type='text/javascript' src='js/toastr.min.js'></script>
+	<link rel='stylesheet' href='css/bootstrap.min.css'>
+	<link rel='stylesheet' href='css/toastr.min.css'>
+	<link rel='stylesheet' href='css/font-awesome.min.css'>
+	<script type='text/javascript'>
+	$(document).ready(function() {
+		// $('button').click(function() {
+		// 	console.log('clicked a button');
+		// });
+		$('#who-voted-for-what').click(function() {
+	        $.ajax({
+	            type: 'GET',
+	            url: 'http://voteapi.empower2018.us/who_voted_for_what',
+	            success: function (array_of_info) {
+	            	var sorted = array_of_info.sort(function(a, b) {
+	            		return b.vote_count > a.vote_count;
+	            	});
+	            	var htmlRows = '';
+	            	for(var i=0; i<array_of_info.length; i++) {
+	            		// htmlRows = htmlRows + array_of_info[i];
+	            		htmlRows += "<tr><td>" + array_of_info[i].voter_name + "</td><td class='api-name'>" + array_of_info[i].api_name + "</td><td></td></tr>";
+	            	}
+					$('#nice-body').html(htmlRows);
+					toastr.success('We successfully loaded some web data!');
+	            }
+	        });
+		});
+		$('#pokemon-filter').click(function() {
+			$('#nice-body tr').each(function(i, v) {
+				if ($(this).find('td.api-name').html() != 'Pokemon') {
+					$(this).hide();
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class='container'>
+		<div class='row'>
+			<div class='col-6'>
+				<div class='btn-group'>
+					<button id='who-voted-for-what' class='btn btn-sm btn-outline-success'>Who voted for what?
+						<i class='fa fa-question-circle'></i>
+					</button>
+					<button id='show-me-the-tally' class='btn btn-sm btn-primary'>Tally Please</button>
+					<button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#really">
+					  Check with Email
+					</button>
+				</div>
+			</div>
+			<div class='col-6'>
+				<table class='table table-dark table-sm table-striped'>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Api</th>
+							<th>
+								<button id='pokemon-filter' class='btn btn-sm btn-warning'>
+									Filter to Pokemon ONLY 
+									<img src='images/pokemon.jpg' style='width: 30px;'/>
+								</button>
+							</th>
+						</tr>
+					</thead>
+					<tbody id='nice-body'>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<div class="modal fade" tabindex="-1" role="dialog" id='really'>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Did you really vote for Pokemon?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Click here to send an email to inquire.
+        	<i class='fa fa-envelope'></i>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
