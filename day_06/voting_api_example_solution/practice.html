@@ -1,0 +1,136 @@
+<html>
+<head>
+  <title>Ajax Review</title>
+  <style type='text/css'>
+  /* lets style our api divs so that we can see their boundaries */
+    div.api-div {
+    	width: 300px;
+    	background-color: #F0F0F0;
+    	margin: 10px;
+    	cursor: pointer;
+    }
+  </style>
+  <script src="scripts/jquery-3.3.1.min.js"></script>
+  <script type='text/javascript'>
+    // this is called to attach the click event to any elements that have a class of api-div
+  	function bindDivClickEvents() {
+		$('.api-div').click(function() {
+        // when someone clicks on an api-div we want to get the text inside of that div and use it
+        // so lets stash it in a variable
+			  var clickedTextValueInTheDiv = $(this).html();
+	  		$.ajax({
+          // this is the HTTP verb we're using for this call, a POST
+	  			type: 'POST',
+          // this is the data payload that we're sending to the url, a POST or PUT can have a payload, a GET cannot
+	  			data: { "api_name": clickedTextValueInTheDiv },
+          // this is the url we're calling
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+          // this is the callback function that will be called by jquery when the POST completes
+          // notice that we have a parameter that is given to us, we decided to name 
+          // it data but we could choose any name we like
+	  			success: function(data) {
+            // we're just writing the response of the api call to the console to look at
+            // we'll also see it in the network tab as the result of the network call
+	  				console.log(data);
+	  			}
+	  		});
+		  });
+	  }
+
+    // this tells jquery to call the callback function we provide here when the page is "ready" (finished loading)
+  	$(document).ready(function() {
+      // as soon as we get the cue from jquery that the page is loaded we perform a GET call to a certain URL to fetch our list of APIs
+  		$.ajax({
+  			type: 'GET',
+  			url: 'http://voteapi.empower2018.us/apis',
+        // this is our callback function that will be passed the data resulting from the GET
+        // we decided to name it api_list_array since that's the data we're getting back, but we could call it anything we like
+  			success: function(api_list_array) {
+          // we know that the result ^ of this api call will look something like this
+          // since we either saw it in a documentation site or we inspected it in the network tab when we tried calling it or we wrote it to the console with console.log 
+
+          // we find the div container that we're going to put our results into for the user to see and click on
+          // we do this outside of the loop, not inside of the loop because we only need to do it 1 time, not each iteration of the loop
+  				var targetContainer = $('#api-list');
+          // this is a vanilla for loop, nothing crazy here
+          // declare and initialize an iterator variable named i
+          // continue looping while i is less than the length of the array we're given
+          // increment the loop counter variable 1 each iteration of the loop 
+  				for(var i=0; i<api_list_array.length; i++) {
+            // let's get the object in our array corresponding to this iteration of the for loop and stash it in a variable
+  					var currentObject = api_list_array[i];
+            // step 1 here is getting the property "name" of the current object
+            // step 2 is concatenating into some html, a div here.  notice that we're giving it a class so that we can talk about it easily later with jquery
+            // step 3 is taking the concatenated string and appending it to our target container at which time it will immediately show up on the screen
+  					targetContainer.append(
+  						'<div class="api-div">'+ currentObject.name +'</div>'
+  						);
+          // this is the end of our for loop, back to top for the next iteration
+  				}
+          // now we've just created a bunch of divs with class of api-div
+          // let's tell jquery that we want to have some code run when someone clicks on one of them
+          // the function definition is up top, we could have just as easily put the code in the function inline here
+          // but it makes it easier to read when it's not indented so much
+  				bindDivClickEvents();
+  			}
+  		});
+    // this is an alternative way to tell jquery to attach events to elements
+    // it automatically will bind the click event to any elements with a class of api-div
+    // EVEN IF THEY COME INTO EXISTENCE LATER (that's the big difference) 
+    // this is not the preferred way to do things because we are forcing jquery to monitor any
+    // change to the page and attach this event which is slightly more work and could get slow if we overuse this feature
+  	// $(document).on('click', '.api-div', function() {
+		//   var clickedTextValueInTheDiv = $(this).html();
+		//   alert(clickedTextValueInTheDiv);
+  	// });
+      // this is a simple click event callback under $(document).ready()
+      // is says run this function whenever someone clicks on an element with an id of show-me-my-vote
+  		$("#show-me-my-vote").click(function() {
+        // we have 1 statement in here, just an ajax call to GET the current vote value
+	  		$.ajax({
+	  			type: 'GET',
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+          // once again this is a callback that will be invoked when the GET completes successfully
+          // we will be given any data resulting from the call in our parameter here called data
+	  			success: function(data) {
+            // we first wrote the result to the console to see what data we get back
+            // we saw that it gave us an object that looks like this, a nested object
+            /*
+              {
+                "message": {
+                  "api_name": "some api name"
+                }  
+              }
+
+            */
+	  				// console.log(data);
+            // this is how you reference the property named "message" which is
+            // an object that contains a property of its own named api_name to get the value
+	  				alert('You voted for ' + data.message.api_name);
+	  			}
+	  		});
+  		});
+      // this is another simple click event callback under $(document).ready()
+      // is says run this function whenever someone clicks on an element with an id of delete-vote
+  		$("#delete-vote").click(function() {
+	  		$.ajax({
+          // the http DELETE verb is what we're using here
+	  			type: 'DELETE',
+	  			url: 'http://voteapi.empower2018.us/tahbaza/vote',
+	  			success: function(data) {
+            // lets inspect the result of our delete request
+            // we could display the data to the user with a popup or some other UI element if we wished
+	  				console.log(data);
+	  			}
+	  		});
+  		});
+  	});
+  </script>
+</head>
+<body>
+	<button id="show-me-my-vote">Show Current Vote</button>
+	<button id="delete-vote">Delete My Vote</button>
+  <div id='api-list'>
+  </div>
+</body>
+</html>
