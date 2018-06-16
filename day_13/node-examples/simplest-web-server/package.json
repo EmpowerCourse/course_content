@@ -1,7 +1,7 @@
 {
-  "name": "p01",
+  "name": "simplest-web-server",
   "version": "1.0.0",
-  "description": "This is an initial node demo program",
+  "description": "This is an example of the simplest possible node web server",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

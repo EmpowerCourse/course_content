@@ -15,7 +15,7 @@
   </div>
   <h1>Day 13</h1>
   <div id="day-description">
-    Node.js: Server-Side Javascript
+    Node.js, Mongoose &amp; MongoDB: Server-Side Javascript and Non-Relational Databases
   </div>
 </div>
 <table id='agenda' cellspacing="0" style='table-layout:fixed;'>
@@ -28,62 +28,90 @@
   <tbody>
     <tr class='normal' onclick='toggleDetails("0830")'>
       <td>08:30 AM</td>
-      <td>Review</td>
+      <td>Introduction to <a href='https://nodejs.org/'>Node.js</a></td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='0830'>
           <ul>
-            <li>Overview of today's goals</li>
+          	<li>What is node, where did it come from and why?</li>
+          	<li>Open a command line, navigate to your project directory and execute <code>node <i>yourProgramName</i></code></li>
+          	<li>Now lets make a web server in 1 minute.
+              <ul>
+                <li>Open a browser and navigate to <code>http://localhost:8080</code> (or whatever port your node program is listening on)</li>
+                <li>...and exactly why is that earth-shattering?</li>
+              </ul>
+          	</li>
           </ul>
         </div>
       </td>
     </tr>
     <tr class='normal' onclick='toggleDetails("0900")'>
       <td>09:00 AM</td>
-      <td>Introduction to <a href='https://nodejs.org/'>Node.js</a></td>
+      <td>Package Management with the Node Package Manager (<a href='https://www.npmjs.com/'>npm</a>)</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='0900'>
           <ul>
-            <li>Download and Install</li>
-            <li>Create and run your first server-side application
+            <li>lets get current by asking npm to update <i>itself</i>
               <ul>
-                <li>Select and use a good text editor (Sublime 2, Notepad, Textmate, etc.)</li>
-                <li>Write your node progam and save it</li>
-                <li>Open a command line, navigate to your project directory and execute <code>node <i>yourProgramName</i></code></li>
-                <li>Open a browser and navigate to <code>http://localhost:8080</code> (or whatever port your node program is listening to)</li>
-                <li>...and exactly why is that earth-shattering?</li>
+                <li><code>npm install npm -g</code></li>
+                <li><code>npm -v</code></li>
               </ul>
             </li>
+            <li><code>npm init</code> and package.json</li>
+            <li><code>npm install something --save</code> (or use package.json as the guide and just say npm install)</li>
+            <li><code>npm update something</code></li>
+            <li><code>npm uninstall something</code></li>
+            <li>...and here is a <a href='http://stackoverflow.com/questions/10568512/how-to-find-search-find-npm-packages'>good SO answer</a> listing ways to find packages</li>
           </ul>
         </div>
       </td>
     </tr>
     <tr class='normal' onclick='toggleDetails("0930")'>
       <td>09:30 AM</td>
-      <td>Package Management with <a href='https://www.npmjs.com/'>npm</a></td>
+      <td>Node: Beauty in Simplicity</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='0930'>
           <ul>
-            <li>Node Package Manager (npm)
+            <li>Let's see and run a simple node web server (<code>node-examples/simplest-web-server</code>)</li>
+	        <li>Let's add express and see what we can do with requests
               <ul>
-                <li>lets get current...
-                  <ul>
-                    <li>npm install npm -g</li>
-                    <li>npm -v</li>
-                  </ul>
-                </li>
-                <li>npm init and package.json</li>
-                <li>npm install something --save (or use package.json as the guide and just say npm install)</li>
-                <li>npm update something</li>
-                <li>npm uninstall something</li>
+	            <li>Primary express features
+	              <ul>
+                    <li>A suggested solution directory structure</li>
+	                <li>Routing
+	                	<ul>
+				            <li><code>node-examples/example-routes</code></li>
+			                <li>Http verb filtering</li>
+				            <li>URL parameters (this/is/my/pretty/:urlParameter) => <code>req.params.urlParameter</code></li>
+				            <li>Query string parameters (this/is/my/not/so/pretty?qsParameter=parameterValue) => <code>req.query.qsParameter</code></li>
+				            <li>POSTed values with body-parser => <code>req.body.formFieldName</code></li>
+	                	</ul>
+	                </li>
+	                <li>Responding to requests
+	                	<ul>
+			                <li>Static file content</li>
+			                <li>Digesting form POST values</li>
+			                <li>Pluggable templating engine for views (Jade, EJS or others)</li>
+			                <li>Dynamic content</li>
+			                <li>Including other Js libraries</li>
+	                	</ul>
+	                </li>
+	              </ul>
+	            </li>
+	            <li>...and now the bad news
+	            	<ul>
+			            <li>node-style error handling</li>
+			            <li>The blessing and curse of callbacks (the "pyramid of doom")</li>
+	            	</ul>
+	            </li>
               </ul>
             </li>
           </ul>
@@ -92,98 +120,51 @@
     </tr>
     <tr class='normal' onclick='toggleDetails("1000")'>
       <td>10:00 AM</td>
-      <td>Practice with the Raw Basics</td>
+      <td>Practice with the basics</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='1000'>
           <ul>
-            <li>How require() works</li>
-            <li>using multiple files and the module.<a href='http://www.sitepoint.com/understanding-module-exports-exports-node-js/'>exports</a> object returned for each
+            <li>How require() works: <a href='http://www.sitepoint.com/understanding-module-exports-exports-node-js/' target='_blank'>exports</a>
               <ul>
                 <li>reference with relative path, absolute path or implied search</li>
-                <li>module.exports = { f1: function() {} } OR</li>
-                <li>exports.f1 = function() {}</li>
+                <li><code>module.exports = { f1: function() {} }</code> OR</li>
+                <li><code>exports.f1 = function() {}</code></li>
               </ul>
             </li>
-            <li>Commonly used packages
+            <li>Reading the documentation for commonly used packages
               <ul>
+              	<li>The latest <a href='https://nodejs.org/dist/latest-v10.x/docs/api/' target='_blank'>docs</a></li>
                 <li>fs</li>
                 <li>path</li>
-                <li>...and here is a <a href='http://stackoverflow.com/questions/10568512/how-to-find-search-find-npm-packages'>good SO answer</a> listing other channels to browse packages</li>
               </ul>
             </li>
-            <li>A <a href='http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js'>SO answer</a> with a short list of recommended node tutorial sites</li>
-            <li>Exercises (use a new package independently - <a href='http://momentjs.com/'>momentjs</a>)</li>
           </ul>
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1030")'>
-      <td>10:30 AM</td>
-      <td>Adding utility with <a href='http://expressjs.com/'>express</a></td>
+    <tr class='normal' onclick='toggleDetails("1130")'>
+      <td>11:30 AM</td>
+      <td>Non-relational Concepts and <a href='https://www.mongodb.org/'>MongoDB</a></td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1030'>
+        <div id='1130'>
           <ul>
-            <li>Express - The most popular node webserver framework
+            <li>Relational vs. Non-Relational Design
               <ul>
-                <li>lets get current...
-                  <ul>
-                    <li>npm install express -g</li>
-                  </ul>
-                </li>
-                <li>A suggested solution directory structure</li>
-                <li>http verbs</li>
-                <li>URL parameters (this/is/my/pretty/:urlParameter) => req.params.urlParameter</li>
-                <li>Query string parameters (this/is/my/not/so/pretty?qsParameter=parameterValue) => req.query.qsParameter</li>
-                <li>Form POST values with body-parser (form post) => req.body.formFieldName</li>
-                <li>primary express features
-                  <ul>
-                    <li>routing</li>
-                    <li>parsing http from the client</li>
-                    <li>static files</li>
-                    <li>processing form POST values</li>
-                    <li>pluggable templating engine for views (jade)</li>
-                  </ul>
-                </li>
-                <li>node-style error handling</li>
-                <li>The blessing and curse of callbacks (the "pyramid of doom")</li>
-                <li>The async library to the rescue (until promises are commonplace)
-                  <ul>
-                    <li>Plain-English use cases and example code for each from <a href='http://www.sebastianseilund.com/nodejs-async-in-practice'>Sebastian Seilund</a>
-                      <ul>
-                        <li>parallel</li>
-                        <li>series</li>
-                        <li>waterfall</li>
-                        <li>each</li>
-                        <li>...mix/match as your needs require and there is much more to found <a href='https://github.com/caolan/async'>here</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
+                <li>Architecture, Scale &amp; Comparison to Relational Approaches</li>
+                <li>Collections</li>
+                <li>Documents</li>
+                <li>Data Types</li>
+                <li>CRUD (create, read, update and delete) Operations</li>
               </ul>
             </li>
-          </ul>
-        </div>
-      </td>
-    </tr>
-    <tr class='normal' onclick='toggleDetails("1100")'>
-      <td>11:00 AM</td>
-      <td>Automating with <a href='http://gulpjs.com/'>gulp</a></td>
-    </tr>
-    <tr class='detail-tr'>
-      <td></td>
-      <td>
-        <div id='1100'>
-          <ul>
-            <li>What is it and why bother?</li>
-            <li>npm install gulp</li>
-            <li>gulpfile.js structure</li>
-            <li>Setup sass preprocessing, css and js minification and a watch</li>
+            <li>Node + <a href='https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/mongoose' target='_blank'>Mongoose</a> + MongoDB = Js Happiness</li>
+            <li>Follow <a href='handouts/NodeWithMongo.pdf' target='_blank'>these instructions</a> to recreate the Voting Api application used in the jquery session of the class for yourself and to see how it works.</li>
           </ul>
         </div>
       </td>
@@ -195,61 +176,52 @@
     </tr>
     <tr class='normal' onclick='toggleDetails("1300")'>
       <td>1:00 PM</td>
-      <td>Practice with node</td>
+      <td>Continue building the site &amp; review the concepts</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='1300'>
           <ul>
-            <li>Exercises</li>
+            <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Use a new package independently - <a href='http://momentjs.com/' target='_blank'>momentjs</a> or <a href='http://underscorejs.org' target='_blank'>underscore.js</a></li>
           </ul>
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1400")'>
-      <td>2:00 PM</td>
-      <td>Our first database: <a href='https://www.mongodb.org/'>MongoDB</a></td>
+    <tr class='normal' onclick='toggleDetails("1430")'>
+      <td>2:30 PM</td>
+      <td>Build your own api and call it from jquery</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1400'>
+        <div id='1430'>
           <ul>
-            <li>Download and Install</li>
-            <li>Non-Relational Database Concepts
-              <ul>
-                <li>Architecture, Scale &amp; Comparison to Relational Approaches</li>
-                <li>Collections</li>
-                <li>Documents</li>
-                <li>Data Types</li>
-                <li>CRUD (create, read, update and delete) Operations</li>
-              </ul>
-            </li>
-            <li>Command line commands and query syntax</li>
-            <li>Enough of that... install <a href='http://robomongo.org/'>robomongo</a></li>
-            <li>...for node: <code>npm install mongoose</code></li>
+            <li>Practice &amp; learn independently</li>
           </ul>
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1500")'>
-      <td>3:00 PM</td>
-      <td>First Functional Application with node and mongo</td>
+    <tr class='normal' onclick='toggleDetails("1630")'>
+      <td>4:30 PM</td>
+      <td>Deploy your api to a Linux server you launch in one of your cloud accounts</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1500'>
+        <div id='1630'>
           <ul>
-            <li>Exercises</li>
+            <li>Deploy and test</li>
+            <li>Assign DNS if you like as a subdomain of your existing domain from day 1</li>
           </ul>
         </div>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <div class='quiz'>Quiz: Node.js &amp; MongoDB</span>
+        <div class='quiz'>
+            There are <i>many</i> online tutorials for node. This <a href='http://stackoverflow.com/questions/2353818/how-do-i-get-started-with-node-js' target='_blank'>SO answer</a> has a decent list of recommended sites to visit for more learning.</li>
+        </span>
       </td>
     </tr>
   </tbody>
