@@ -35,14 +35,23 @@
       <td>
         <div id='0830'>
           <ul>
-            <li>Data Types</li>
-            <li>Stored Procedures, parameters, variables and temp tables</li>
-            <li>Views</li>
-            <li>Functions</li>
-            <li>Triggers</li>
-            <li>Arrays and CSVs</li>
+            <li>PgAdmin Usage</li>
+            <li>; are required</li>
+            <li>IF...THEN...ELSE...END IF; instead of IF...BEGIN...END</li>
+            <li>Coding style: all lower case, id as surrogate key name, use _ in compound names</li>
+            <li>Name delimiter is "", not []</li>
+            <li>CONCAT or ||, not + for string concatenation</li>
+            <li>Variables have no special prefix but must be declared <i>before</i> the BEGIN in a "function" definition</li>
+            <li>No SET keyword but you must use := instead of = to assign a variable value</li>
+            <li>Cursors are different - FOR...IN syntax with a RECORD data type</li>
+            <li>Data Types: "character varying" instead of varchar, true or false instead of 1 or 0</li>
+            <li>Stored Procedures are called "Functions", temp tables are declared differently (see real world examples in the subdirectory)</li>
+            <li>Views work the same</li>
+            <li>The concept of a functions and stored procedure are one in the same here</li>
+            <li>Triggers exist and work the same</li>
+            <li>Array and CSV processing is very powerful and developer friendly here, a multitude of pre-defined functions exist to make developers' lives easier</li>
             <li>CONCAT, COALESCE, LIMIT</li>
-            <li>SERIAL or SEQUENCE (Oracle does it this way) or IDENTITY as of v10</li>
+            <li>SERIAL or SEQUENCE (Oracle does it this way) or IDENTITY as of v10, not IDENTITY</li>
             <li>BACKUP and RESTORE</li>
             <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Query Sakila on Postgres</li>
           </ul>
@@ -58,12 +67,15 @@
       <td>
         <div id='1030'>
           <ul>
-            <li>Data Types</li>
+            <li>MySQL Workbench Usage</li>
+            <li>; are required</li>
+            <li>Name delimiter is ``, not []</li>
+            <li>Data Types: true or false instead of 1 or 0</li>
             <li>Stored Procedures, parameters, variables and temp tables</li>
             <li>Views</li>
             <li>Functions</li>
             <li>Triggers</li>
-            <li>AUTO_INCREMENT</li>
+            <li>AUTO_INCREMENT, not IDENTITY</li>
             <li>BACKUP and RESTORE</li>
             <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Query Sakila on MySQL</li>
           </ul>
