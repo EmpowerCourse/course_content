@@ -1,9 +1,8 @@
-var http = require('http'),
-	port = 1335;
+var http = require('http');
 
-http.createServer(function(req, res) {
-	console.log(req.url + ' was requested with verb ' + req.method);
-	res.end('requested path [' + req.url + ']');
-}).listen(port, '127.0.0.1');
+http.createServer(function(request, response) {
+	console.log(request.url + ' was requested with verb ' + request.method);
+	response.end('You just now requested path [' + request.url + ']');
+}).listen(8888);
 
-console.log('Started server on local port ' + port + '!');
+console.log('We just launched a node web server on local port 8888!');

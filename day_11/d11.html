@@ -15,7 +15,7 @@
   </div>
   <h1>Day 11</h1>
   <div id="day-description">
-    [Day 11 Description Here]
+    Relational Database Design &amp; SQL Querying
   </div>
 </div>
 <table id='agenda' cellspacing="0" style='table-layout:fixed;'>
@@ -28,15 +28,135 @@
   <tbody>
     <tr class='normal' onclick='toggleDetails("0830")'>
       <td>08:30 AM</td>
-      <td>Morning Activity</td>
+      <td>Real World Relational Design</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='0830'>
           <ul>
-            <li>Walkthrough</li>
-            <li>Exercises</li>
+            <li>Relationships
+              <ul>
+                <li>ERD</li>
+                <li>1:Many</li>
+                <li>Many:Many</li>
+                <li>Record duplication, elimination and NULLs with JOINs</li>
+              </ul>
+            </li>
+            <li>Conceptual Normalized Design
+              <ul>
+                <li>Why not 1 big table?</li>
+                <li>Impromptu group modeling x3</li>
+                <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Split into groups and do a 4th for 30 min</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1030")'>
+      <td>10:30 AM</td>
+      <td>Fundamentals Review</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1030'>
+          <ul>
+            <li>BACKUP and RESTORE</li>
+            <li>Keys
+              <ul>
+                <li>Skinny = Fast</li>
+                <li>Primary Key
+                  <ul>
+                    <li>Natural</li>
+                    <li>Surrogate</li>
+                    <li>Composite</li>
+                  </ul>
+                </li>
+                <li>Foreign Key</li>
+                <li>Referential Integrity</li>
+                <li>Indexes vs. Constraints</li>
+                <li>Clustered vs. Nonclustered Indexes</li>
+              </ul>
+            </li>
+            <li>Data Types
+              <ul>
+                <li>date, smalldatetime, datetime, datetime2</li>
+                <li>int, smallint, tinyint</li>
+                <li>bit</li>
+                <li>numeric, decimal, float</li>
+                <li>varchar, nvarchar, char, nchar</li>
+                <li>text, image</li>
+              </ul>
+            </li>
+            <li>Conditional Operators
+              <ul>
+                <li>=, &gt;, &lt;, &gt;=, &lt;=, &lt;&gt;, !=, BETWEEN, IN, NOT IN, LIKE, NOT LIKE, IS NULL, IS NOT NULL, EXISTS, NOT EXISTS</li>
+              </ul>
+            </li>
+            <li>Anatomy of a SQL SELECT
+              <ul>
+                <li>SELECT column list (why not *?)</li>
+                <li>TOP</li>
+                <li>Table and Column Aliases</li>
+                <li>Joins
+                  <ul>
+                    <li>INNER JOIN</li>
+                    <li>LEFT (or right) JOIN</li>
+                  </ul>
+                </li>
+                <li>WHERE</li>
+                <li>ORDER BY</li>
+              </ul>
+            </li>
+            <li>Useful Functions
+              <ul>
+                <li>COALESCE, ISNULL</li>
+                <li>CASE, both flavors</li>
+                <li>Strings: SUBSTRING, CHARINDEX, LEN, LEFT, RIGHT</li>
+                <li>Dates: DATEADD, DATEDIFF, FORMAT, GETDATE, GETUTCDATE, DATEPART/YEAR/MONTH/DAY, DATENAME</li>
+                <li>CAST, CONVERT</li>
+              </ul>
+            </li>
+            <li>Aggregate Queries
+              <ul>
+                <li>GROUP BY</li>
+                <li>SUM, COUNT, MIN, MAX, AVG, STDEV</li>
+                <li>HAVING</li>
+              </ul>
+            </li>
+            <li>Correlated Subqueries</li>
+            <li>Less Frequently Used SELECT Variants
+              <ul>
+                <li>Derived tables</li>
+                <li>UNION and UNION ALL (point out column definition/type and order by placement)</li>
+                <li>FULL OUTER JOIN</li>
+                <li>CROSS JOIN</li>
+              </ul>
+            </li>
+            <li>...and even more if you're interested
+              <ul>
+                <li>Abusing a left join to ensure lack of existence</li>
+                <li>Compound ON clause or entries in the WHERE clause?</li>
+                <li>8K pages, BTREEs and how this black magic really works</li>
+                <li>Join multiple times to the same table in a single query</li>
+                <li>COMPUTED PERSISTED columns</li>
+                <li>CTE</li>
+                <li>Recursive CTE</li>
+                <li>CROSS APPLY</li>
+                <li>OUTER APPLY</li>
+                <li>PIVOT and UNPIVOT</li>
+                <li>Windowing Functions with OVER()</li>
+                <li>OUTPUT clauses on insert, update and delete</li>
+                <li>.NET dlls in the database: CLR assembly definition and usage</li>
+                <li>Administration Features (Complex backup and restore scenarios, SQL Agent, Perfmon counters, Replication scenarios)</li>
+                <li>SSAS</li>
+                <li>SSRS</li>
+                <li>Performance Analysis (Indexes, objective/measurable improvement, general considerations, etc.)</li>
+              </ul>
+            </li>
+            <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Query practice with Sakila</li>
           </ul>
         </div>
       </td>
@@ -48,22 +168,42 @@
     </tr>
     <tr class='normal' onclick='toggleDetails("1300")'>
       <td>1:00 PM</td>
-      <td>Afternoon Activity</td>
+      <td>Core SQL Server Database Objects Besides Tables</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='1300'>
           <ul>
-            <li>Walkthrough</li>
-            <li>Exercises</li>
+            <li>Server and database users</li>
+            <li>Why stored procedures? Speed. Whaaat?</li>
+            <li>Stored Procedures, parameters, variables and temp tables</li>
+            <li>Views, "WITH SCHEMABINDING"</li>
+            <li>Functions</li>
+            <li>Triggers</li>
+            <li>CLUSTERED and NONCLUSTERED Indexes, can be used as CONSTRAINTS</li>
+            <li>DEFAULT CONSTRAINTs</li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+    <tr class='normal' onclick='toggleDetails("1400")'>
+      <td>2:00 PM</td>
+      <td>Query Challenges</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1400'>
+          <ul>
+            <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Building expertise with queries</li>
           </ul>
         </div>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <div class='quiz'>Quiz: </span>
+        <div class='quiz'></span>
       </td>
     </tr>
   </tbody>
