@@ -1,0 +1,52 @@
+npm init
+npm install -g express-generator
+express --view=ejs node-sql
+npm install --save body-parser
+npm install --save underscore
+npm install --save sequelize
+# one of these
+npm install --save pg pg-hstore
+npm install --save mysql2
+npm install --save tedious
+
+# db script
+create table item (
+id int AUTO_INCREMENT PRIMARY KEY,
+name varchar(100)
+);
+
+create table item_comment (
+id int AUTO_INCREMENT PRIMARY KEY,
+item_id int NOT NULL REFERENCES item(id),
+  FOREIGN KEY (item_id) REFERENCES item(id) ON UPDATE CASCADE ON DELETE CASCADE,
+saved_at datetime NOT NULL,
+saved_by varchar(100) NOT NULL,
+comment_text varchar(1000) NOT NULL
+);
+
+CREATE USER 'bevuser'@'localhost' IDENTIFIED BY 'bevuserpwd';
+GRANT ALL PRIVILEGES ON *.* TO 'bevuser'@'localhost' WITH GRANT OPTION;
+
+# add to /db/config.js
+const Sequelize = require('sequelize');
+const db = new Sequelize('bev', 'bevuser', 'bevuserpwd', {
+  host: 'localhost',
+  port: 3306,
+  dialect: 'mysql',
+  operatorsAliases: false,
+  pool: { max: 5, min: 0, acquire: 30000, idle: 10000 }
+});
+db.authenticate().then(() => {
+    console.log('Connection has been established successfully.');
+  }).catch(err => {
+    console.error('Unable to connect to the database:', err);
+  });
+
+# create /routes/bev.js and add a router reference in app.js
+# create /models/item.js and comment.js
+# post to localhost:3000/bev/save-item with { "name": "Beer" }
+# post to localhost:3000/bev/save-comment with { "comment_text": "Still good", "saved_by": "Ali", "item_id": 2 }
+# most of the rest of the work is in the bev.js route
+
+npm install
+npm start
