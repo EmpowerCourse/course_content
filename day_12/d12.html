@@ -28,12 +28,61 @@
   <tbody>
     <tr class='normal' onclick='toggleDetails("0830")'>
       <td>08:30 AM</td>
-      <td>PostgreSQL</td>
+      <td>SQL Relational Design Review</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
         <div id='0830'>
+          <ul>
+            <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Group design another database</li>
+          </ul>
+		</div>
+	  </td>
+	</tr>
+    <tr class='normal' onclick='toggleDetails("0900")'>
+      <td>09:00 AM</td>
+      <td>SQL Review</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='0900'>
+          <ul>
+            <li>SQL Basics
+              <ul>
+                <li>SELECT...FROM...WHERE</li>
+	            <li>INNER JOIN, any number of tables</li>
+	            <li>LEFT JOIN, any number of tables</li>
+	            <li>GROUP BY, with or without aggregate function usage</li>
+                <li>CASE</li>
+              </ul>
+            </li>
+            <li>Useful predefined functions
+              <ul>
+                <li>For Strings: SUBSTRING, CHARINDEX, LEN, LEFT, RIGHT</li>
+                <li>For Dates: DATEADD, DATEDIFF, FORMAT, GETDATE, GETUTCDATE, DATEPART/YEAR/MONTH/DAY, DATENAME</li>
+                <li>COALESCE, ISNULL, CAST, CONVERT</li>
+              </ul>
+            </li>
+            <li>Subqueries</li>
+            <li>Derived Tables (looks like a subquery you select from)</li>
+            <li>CLUSTERED vs. NONCLUSTERED Index</li>
+            <li>Views, Functions and Triggers</li>
+            <li>Stored Procedures</li>
+            <li><span style='color: #FF0000; text-style: italic;'>EXERCISE:</span> Write a stored procedure</li>
+		  </ul>
+		</div>
+	  </td>
+	</tr>
+    <tr class='normal' onclick='toggleDetails("1030")'>
+      <td>10:30 AM</td>
+      <td>PostgreSQL</td>
+    </tr>
+    <tr class='detail-tr'>
+      <td></td>
+      <td>
+        <div id='1030'>
           <ul>
             <li>PgAdmin Usage</li>
             <li>; are required</li>
@@ -58,14 +107,14 @@
         </div>
       </td>
     </tr>
-    <tr class='normal' onclick='toggleDetails("1030")'>
-      <td>10:30 AM</td>
+    <tr class='normal' onclick='toggleDetails("1130")'>
+      <td>11:30 AM</td>
       <td>MySQL</td>
     </tr>
     <tr class='detail-tr'>
       <td></td>
       <td>
-        <div id='1030'>
+        <div id='1130'>
           <ul>
             <li>MySQL Workbench Usage</li>
             <li>; are required</li>
